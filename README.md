@@ -1,5 +1,3 @@
-# eFTI TestBed
-
 This is eFTI testbed - a playground for eFTI project member states.
 This is a place for testing implementations of eFTI gate, platform and authority systems.
 
