@@ -43,7 +43,7 @@ For **REST API** integration you need to implement **two endpoints** to your pla
 
 The endpoints that platform should expose are visible in this [**OpenAPI** documentation](https://demo-platform.eu-ee32.eftisandbox.eu/v1/openapi).
 
-The request sent by the platform is visible in this [**OpenAPI** documentation](https://eu-ee32.eftisandbox.eu/v1/openapi) under the **For Platforms** section.
+The endpoint (on the Gate) where the platform should make the requests to is visible in this [**OpenAPI** documentation](https://eu-ee32.eftisandbox.eu/v1/openapi) under the `For Platforms` section.
 
 ### eDelivery
 
