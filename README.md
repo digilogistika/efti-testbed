@@ -17,18 +17,31 @@ The eFTI TestBed is available here: [https://eu-ee32.eftisandbox.eu/](https://eu
 Contact [support@dlk.ee](mailto:support@dlk.ee) to get your gate/platform/authority registered in the TestBed.
 
 After you have contacted with the [support mail](mailto:support@dlk.ee) that you want to connect with the TestBed, you will receive credentials for a user that can access the Admin Panel.
-From there you can see exactly the state of your current integration.
-
-This just a helpful tool for understanding what is going inside the TestBed.
 
 ## Integrations
 
-### For Gates
+- [For Gates](#for-gates)
+- [For Platforms](#for-platforms)
+  - [REST API](#rest-api)
+  - [eDelivery](#edelivery)
+- [For Authorities](#for-authorities)
+
+
+## For Gates
 some text about eDelivery
 
-### For Platforms
+## For Platforms
+As a platform you have **two** ways to connect with the TestBed:
+- eDelivery
+- REST API
+
+You can choose which every one is easier for you, but we strongly recommend the **REST API** since it is (a lot) faster and easier to implement.
+In you really want you can of course use both as well.
+
+### REST API
 https://eu-ee32.eftisandbox.eu/v1/openapi - eFTI API (For Platforms section)
 https://demo-platform.eu-ee32.eftisandbox.eu/v1/openapi - Platform own API
+### eDelivery
 
-### For Authorities
+## For Authorities
 https://eu-ee32.eftisandbox.eu/v1/openapi - eFTI API (For Authorities section)
