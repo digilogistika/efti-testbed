@@ -30,12 +30,18 @@ After you have contacted with the [support mail](mailto:support@dlk.ee) that you
 some text about eDelivery
 
 ## For Platforms
-As a platform you have **two** ways to connect with the TestBed:
+As a platform you have **two** ways to connect with the **eFTI TestBed**:
 - [**REST API**](#rest-api)
 - [**eDelivery**](#edelivery)
 
 You can choose which every one is easier for you, but we strongly recommend the **REST API** since it is (a lot) faster and easier to implement.
-In you really want you can of course use both as well.
+If you really want you can of course use both as well.
+
+The messages sent between platform and the **Gate** are according to the [**eFTI schemas**](https://github.com/EFTI4EU/reference-implementation/tree/main/schema).
+
+When a consignment is created on the platform an identifiers set should be sent to the **Gate**. Here is [the **XSD**](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/consignment-identifier.xsd) that defines identifiers set.
+
+When a consignment is queried by the authority through **the Gate** the platform has to respond with the consignment dataset (based on the subsets). Here is [the **XSD**](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/consignment-common.xsd) that defines consignment dataset and what fields should be included based on the subsets.
 
 ### REST API
 For **REST API** integration you need to implement **two endpoints** to your platform and a **single request** that is sent to the **Gate**.
