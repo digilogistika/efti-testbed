@@ -1,5 +1,8 @@
 # eFTI TestBed
 
+This is eFTI testbed - a playground for eFTI project member states.
+This is a place for testing implementations of eFTI gate, platform and authority systems.
+
 The eFTI TestBed is available here:
 https://eu-ee32.eftisandbox.eu/
 
