@@ -32,15 +32,19 @@ some text about eDelivery
 
 ## For Platforms
 As a platform you have **two** ways to connect with the TestBed:
-- eDelivery
-- REST API
+- [**REST API**](#rest-api)
+- [**eDelivery**](#edelivery)
 
 You can choose which every one is easier for you, but we strongly recommend the **REST API** since it is (a lot) faster and easier to implement.
 In you really want you can of course use both as well.
 
 ### REST API
-https://eu-ee32.eftisandbox.eu/v1/openapi - eFTI API (For Platforms section)
-https://demo-platform.eu-ee32.eftisandbox.eu/v1/openapi - Platform own API
+For **REST API** integration you need to implement **two endpoints** to your platform and a **single request** that is sent to **the Gate**.
+
+The endpoints that platform should expose are visible in this [**OpenAPI** documentation](https://demo-platform.eu-ee32.eftisandbox.eu/v1/openapi).
+
+The request sent by the platform is visible in this [**OpenAPI** documentation](https://eu-ee32.eftisandbox.eu/v1/openapi) under the **For Platforms** section.
+
 ### eDelivery
 
 ## For Authorities
