@@ -27,7 +27,14 @@ After you have contacted with the [support mail](mailto:support@dlk.ee) that you
 - [For Authorities](#for-authorities)
 
 ## For Gates
-some text about eDelivery
+Since gates only communicate with each other through **eDelivery** you must handle following eFTI messages through **eDelivery**:
+- [*identifierQuery*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/identifier-query.xml) and [*identifierResponse*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/identifier-response.xml)
+- [*uilQuery*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-query.xml) and [*uilResponse*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-response.xml)
+- [*postFollowUpRequest*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/follow-up-request.xml)
+
+**Gate's** eDelivery endpoint is `https://eu-ee32.eftisandbox.eu/services/msh`.
+
+For eDelivery integration both sides also need the other's certificate, so make sure you set your gate's certificate in the **Admin Panel**.
 
 ## For Platforms
 As a platform you have **two** ways to connect with the **eFTI TestBed**:
@@ -54,7 +61,7 @@ The endpoints that platform should expose are visible in this [**OpenAPI** docum
 The endpoint (on the **Gate**) where the platform should make the requests to is visible in this [**OpenAPI** documentation](https://eu-ee32.eftisandbox.eu/v1/openapi) under the `For Platforms` section.
 
 ### eDelivery
-For **eDelivery** integration you need to implement an eDelivery endpoint that can handle **two different** eDelivery messages ([*uilQuery*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-query.xml) and [*postFollowUpRequest*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/follow-up-request.xml)) and a request that is sent to the **Gate's** eDelivery endpoint ([*saveIdentifiersRequest*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/save-identifiers.xml)).
+For **eDelivery** integration you need to implement an eDelivery endpoint that can handle **two different** eFTI messages ([*uilQuery*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-query.xml) and [*postFollowUpRequest*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/follow-up-request.xml)) and a request that is sent to the **Gate's** eDelivery endpoint ([*saveIdentifiersRequest*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/save-identifiers.xml)).
 Since **eDelivery** is *asynchronous* you must answer to the [*uilQuery*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-query.xml) with the [*uilResponse*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-response.xml) message.
 
 **Gate's** eDelivery endpoint is `https://eu-ee32.eftisandbox.eu/services/msh`.
