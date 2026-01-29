@@ -62,6 +62,6 @@ Since **eDelivery** is *asynchronous* you must answer to the [*uilQuery*](https:
 For eDelivery integration both sides also need the other's certificate, so make sure you set your platform's certificate in the **Admin Panel** (to see the certificate field enable **eDelivery**).
 
 ## For Authorities
-As an authority you can integrate with the **Gate** with simple **REST API**. For other types of integrations are not planned of the **TestBed** currently.
+As an authority you can integrate with the **Gate** with simple **REST API**. Other types of integrations are not planned of the **TestBed** currently.
 
 The endpoints that the authority can request from the **Gate** are visible in this [**OpenAPI** documentation](https://eu-ee32.eftisandbox.eu/v1/openapi) under the `For Authorities` section.
