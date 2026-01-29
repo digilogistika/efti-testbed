@@ -43,7 +43,7 @@ When a consignment is created on the platform an identifiers set should be sent 
 
 When a consignment is queried by the authority through the **Gate** the platform has to respond with the consignment dataset (based on the **subsets**). Here is [the **XSD**](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/consignment-common.xsd) that defines consignment dataset and what fields should be included based on the **subsets**.
 
-**Subsets** can be though of as rights that authorities have to ask some type of data.
+**Subsets** can be though of as rights that authorities have, to ask some type of data.
 For example if an authority has subset `EU01` then they can only access the data that is predefined to `EU01`.
 
 ### REST API
@@ -59,7 +59,7 @@ Since **eDelivery** is *asynchronous* you must answer to the [*uilQuery*](https:
 
 **Gate's** eDelivery endpoint is `https://eu-ee32.eftisandbox.eu/services/msh`.
 
-For eDelivery integration both sides also need the other's certificate, so make sure you put your platform's certificate in the **Admin Panel**.
+For eDelivery integration both sides also need the other's certificate, so make sure you set your platform's certificate in the **Admin Panel** (to see the certificate field enable **eDelivery**).
 
 ## For Authorities
 https://eu-ee32.eftisandbox.eu/v1/openapi - eFTI API (For Authorities section)
