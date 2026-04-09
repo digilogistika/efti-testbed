@@ -70,6 +70,8 @@ The endpoints your platform must expose are documented in this [**OpenAPI** spec
 
 The **Gate** endpoint used by platforms is documented in this [**OpenAPI** specification](https://eu-ee32.eftisandbox.eu/v1/openapi) under the `For Platforms` section.
 
+To verify that the Gate can reach your platform, a ping can be triggered via platform admin.
+
 Authentication with REST API is done by using Basic token in the header of the request. 
 Example of the Authorization header with email abc@example.com and pass 1234 construct the header like so:
 
