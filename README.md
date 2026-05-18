@@ -18,6 +18,10 @@ It provides visibility into the internal processes of the **Gate**.
 
 The **eFTI TestBed** is available at: [https://eu-ee32.eftisandbox.eu/](https://eu-ee32.eftisandbox.eu/)
 
+The **eu-ee32** public IP: 77.42.44.136
+
+The **eu-ee31** public IP: 46.62.227.86
+
 ## Onboarding
 Contact [support@dlk.ee](mailto:support@dlk.ee) to register your Gate, Platform or Authority in the **eFTI TestBed**.
 
