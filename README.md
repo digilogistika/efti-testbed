@@ -46,6 +46,15 @@ For eDelivery integration, both parties must exchange certificates.
 Make sure your Gate's certificate is configured in the **Admin Panel**.
 The certificate of the **eFTI TestBed Gate** is visible under the `This gate details` view.
 
+After integration you are able to configure your gates and manage their users from the **Admin panel**. Additionally, you can make identifier and dataset queries from the **Demo Authority UI**.
+
+Example **identifiers** to query: 006EST, 080EST
+
+Example **UIL** to query dataset:
+- **Gate ID**: EU-EE32
+- **Platform ID**: demo
+- **Dataset ID**: 9efaf791-3898-4062-9b9f-4efbc12501d6
+
 ## For Platforms
 As a platform you have **two** ways to connect with the **eFTI TestBed**:
 - [**REST API**](#rest-api)
@@ -64,6 +73,8 @@ The dataset structure and subset-dependent fields are defined in [this **XSD**](
 
 **Subsets** can be thought of as access rights that define which data an authority is allowed to request.
 For example, if an authority has subset `EU01`, it can only access the data fields defined for `EU01`.
+
+After integration you are able to configure your platforms, manage their users and view consignments from the **Admin panel**. Furthermore, you can query identifiers and datasets from your platforms from the **Demo Authority UI**.
 
 ### REST API
 For **REST API** integration, your platform must:
@@ -105,3 +116,13 @@ Authorities can integrate with the **Gate** using a simple **REST API**.
 Other integration types are not currently planned for the **eFTI TestBed**.
 
 The available authority endpoints are documented in this [**OpenAPI** specification](https://eu-ee32.eftisandbox.eu/v1/openapi) under the `For Authorities` section.
+
+After integration you are able to configure your authorities and manage their users from the **Admin panel**. In addition, you can make identifier and dataset queries from the **Demo Authority UI**.
+
+
+Example **identifiers** to query: 006EST, 080EST
+
+Example **UIL** to query dataset:
+- **Gate ID**: EU-EE32
+- **Platform ID**: demo
+- **Dataset ID**: 9efaf791-3898-4062-9b9f-4efbc12501d6
