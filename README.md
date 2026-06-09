@@ -1,4 +1,6 @@
-<img alt="eFTI4ALL" height="35" src="https://efti4all.eu/wp-content/uploads/2024/11/eft4all-logo-color@2x-1.png"> &nbsp;&nbsp; <img alt="Digilogistika Keskus" height="40" src="https://dlk.ee/wp-content/uploads/2020/12/cropped-634328faa26e3f71d35b6651_DLKlogo-e1700323210714-1-250x61.png"> &nbsp;&nbsp; <img alt="Co-funded by EU" height="35" src="https://ec.europa.eu/regional_policy/images/information-sources/logo-download-center/eu_co_funded_en.jpg"> &nbsp;&nbsp; <img alt="eFTI4EU" height="35" src="https://efti4eu.eu/wp-content/uploads/2023/09/logo.png"> &nbsp;&nbsp; <img alt="eFTI4LIVE" height="35" src="https://efti4live.eu/wp-content/uploads/2025/11/EFTI4LIVE-logo-color_1@4x.png"> &nbsp;&nbsp; <img alt="Pikker Development" height="30" src="img/pikker_logo_black.png">
+<img alt="eFTI4ALL" height="35" src="https://efti4all.eu/wp-content/uploads/2024/11/eft4all-logo-color@2x-1.png"> &nbsp;&nbsp; <img alt="Digilogistika Keskus" height="40" src="https://dlk.ee/wp-content/uploads/2020/12/cropped-634328faa26e3f71d35b6651_DLKlogo-e1700323210714-1-250x61.png"> &nbsp;&nbsp; <img alt="Co-funded by EU" height="35" src="https://efti4eu.eu/wp-content/uploads/2023/09/EN_Co-fundedbytheEU_RGB_POS-2048x457.png"> &nbsp;&nbsp; <img alt="eFTI4EU" height="35" src="https://efti4eu.eu/wp-content/uploads/2023/09/logo.png"> &nbsp;&nbsp; 
+
+<img alt="eFTI4LIVE" height="35" src="https://efti4live.eu/wp-content/uploads/2025/11/EFTI4LIVE-logo-color_1@4x.png"> &nbsp;&nbsp; <img alt="Pikker Development" height="30" src="img/pikker_logo_black.png">
 
 ## Introduction
 
