@@ -29,7 +29,7 @@ The **eu-ee32** public IP: 77.42.44.136
 The **eu-ee31** public IP: 46.62.227.86
 
 ## Onboarding
-If you want to integrate with the eFTI TestBed, please fill out this form: [eFTI TestBed Access Request Information Form](https://forms.office.com/r/sGm0CrgHtT)
+If you want to integrate with the eFTI TestBed, please fill out this form: [eFTI TestBed Access Request Information Form](https://forms.office.com/r/sGm0CrgHtT).
 
 After submitting your request, you will receive credentials for a user account with access to the **Admin Panel**. For any additional questions, you can contact [support@dlk.ee](mailto:support@dlk.ee).
 
