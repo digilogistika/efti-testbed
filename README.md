@@ -62,7 +62,7 @@ Example **UIL** to query dataset:
 - **Dataset ID**: 9efaf791-3898-4062-9b9f-4efbc12501d6
 
 ### Automated testing
-Admins can execute automated performance tests against integrated Gates using a single identifier. This tool sequentially triggers an identifier query, a dataset query, and a follow-up message, generating a report detailing test case success and execution latency.
+Admins can execute automated performance tests against integrated gates using a single identifier. This tool sequentially triggers an identifier query, a dataset query, and a follow-up message, generating a report detailing test case success and execution latency.
 
 ## For Platforms
 As a platform you have **two** ways to connect with the **eFTI TestBed**:
