@@ -61,6 +61,9 @@ Example **UIL** to query dataset:
 - **Platform ID**: demo
 - **Dataset ID**: 9efaf791-3898-4062-9b9f-4efbc12501d6
 
+### Automated testing
+Admins can execute automated performance tests against integrated Gates using a single identifier. This tool sequentially triggers an identifier query, a dataset query, and a follow-up message, generating a report detailing test case success and execution latency.
+
 ## For Platforms
 As a platform you have **two** ways to connect with the **eFTI TestBed**:
 - [**REST API**](#rest-api)
@@ -116,6 +119,9 @@ The **Gate's** eDelivery endpoint is: `https://eu-ee32.eftisandbox.eu/services/m
 For eDelivery integration, both parties must exchange certificates.
 Make sure your Gate's certificate is configured in the **Admin Panel**.
 The certificate of the **eFTI TestBed Gate** is visible under the `This gate details` view.
+
+### Automated testing
+Admins can execute automated performance tests for platforms using a single Dataset ID. This tool sequentially triggers a dataset query, and a follow-up message, generating a report detailing test case success and execution latency.
 
 ## For Authorities
 Authorities can integrate with the **Gate** using a simple **REST API**.
