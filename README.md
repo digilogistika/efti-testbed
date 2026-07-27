@@ -114,7 +114,7 @@ Additionally, the platform must send a [*saveIdentifiersRequest*](https://github
 
 Because **eDelivery** is *asynchronous*, the platform must respond to a [*uilQuery*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-query.xml) with a corresponding [*uilResponse*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-response.xml).
 
-The **Gate's** eDelivery endpoint is: `https://eu-ee32.eftisandbox.eu/services/msh`.
+The **Gate's** eDelivery endpoint is: `https://eu-eeThe following tables outline current member states, software vendors, and platform providers active or onboarding in the eFTI TestBed environment.32.eftisandbox.eu/services/msh`.
 
 For eDelivery integration, both parties must exchange certificates.
 Make sure your Gate's certificate is configured in the **Admin Panel**.
@@ -138,3 +138,26 @@ Example **UIL** to query dataset:
 - **Gate ID**: EU-EE32
 - **Platform ID**: demo
 - **Dataset ID**: 9efaf791-3898-4062-9b9f-4efbc12501d6
+
+## Integrators
+The following lists outline current member states and platform providers active or onboarding in the eFTI TestBed environment.
+
+### Integrated gates
+- **Austria**
+- **Finaland**
+- **Italy**
+- **France**
+- **Lithuania**
+- **Germany**
+- **Luxembourg**
+- **Sweden**
+- **Spain**
+- **Greece**
+
+### Integrated platforms
+- **Ybil**
+- **Edisoft**
+- **Cargoson**
+- **Abona**
+- **GBK Trusted Partner**
+- **NeoGLS**
