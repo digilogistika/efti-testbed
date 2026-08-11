@@ -144,7 +144,7 @@ The following lists outline current member states and platform providers active 
 
 ### Integrated gates
 - **Austria**
-- **Finaland**
+- **Finland**
 - **Italy**
 - **France**
 - **Lithuania**
