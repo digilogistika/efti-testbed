@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This schema file corresponds to the eFTI Delegated Act (EU) 2024/2024 (known as V1.0)-->
+<xs:schema xmlns:udt="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34"
+    elementFormDefault="qualified"
+    version="beta">
+  <xs:complexType name="CodeType">
+    <xs:simpleContent>
+      <xs:extension base="udt:token_3"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="DateTimeDateTimeStringContentType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DateTimeType">
+    <xs:choice>
+      <xs:element name="DateTimeString">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="udt:DateTimeDateTimeStringContentType">
+              <xs:attribute name="format" type="udt:string" use="required">
+                <xs:annotation>
+                  <xs:documentation>
+                    <eFTI_CL>CL-020</eFTI_CL>
+                    <eFTI_ID>eFTI5</eFTI_ID>
+                    <eFTI_DEF>The format of the date/time content.</eFTI_DEF>
+                    <eFTI_BN>Date time format code</eFTI_BN>
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:attribute>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="IDType">
+    <xs:simpleContent>
+      <xs:extension base="udt:token"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="IDType_2">
+    <xs:simpleContent>
+      <xs:extension base="udt:token_2"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="IDType_3">
+    <xs:simpleContent>
+      <xs:extension base="udt:token">
+        <xs:attribute name="schemeID" type="udt:token_2" fixed="RFC 9562-4" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1903</eFTI_ID>
+              <eFTI_DEF>The identification of the identification scheme.</eFTI_DEF>
+              <eFTI_BN>Identification Scheme Identifier</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="IDType_4">
+    <xs:simpleContent>
+      <xs:extension base="udt:token">
+        <xs:attribute name="schemeID" type="udt:token_2" fixed="RFC 9562-4" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1795</eFTI_ID>
+              <eFTI_DEF>The identification of the identification scheme.</eFTI_DEF>
+              <eFTI_BN>Identification Scheme Identifier</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="IDType_5">
+    <xs:simpleContent>
+      <xs:extension base="udt:token">
+        <xs:attribute name="schemeID" type="udt:token_2" fixed="RFC 9562-4" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI2004</eFTI_ID>
+              <eFTI_DEF>The identification of the identification scheme.</eFTI_DEF>
+              <eFTI_BN>Scheme ID</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="string">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="207"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="string_2">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="512"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TextType">
+    <xs:simpleContent>
+      <xs:extension base="udt:string_2">
+        <xs:attribute name="languageID" type="udt:token_4" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1873</eFTI_ID>
+              <eFTI_CL>CL-063</eFTI_CL>
+              <eFTI_BN>Language ID</eFTI_BN>
+              <eFTI_DEF>The identifier of the language used in the corresponding text string.</eFTI_DEF>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="token">
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="36"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_2">
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="17"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_3">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="400"/>
+      <xs:enumeration value="403"/>
+      <xs:enumeration value="404"/>
+      <xs:enumeration value="406"/>
+      <xs:enumeration value="408"/>
+      <xs:enumeration value="409"/>
+      <xs:enumeration value="422"/>
+      <xs:enumeration value="500"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_4">
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

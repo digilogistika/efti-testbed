@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:FTI004UploadIdentifierRequest
+  xmlns:rsm="urn:eu:move:eFTI:data:standard:FTI004UploadIdentifierRequest:1"
+  xmlns="urn:eu:move:eFTI:data:standard:ReusableAggregateBusinessInformationEntity:34"
+  xmlns:udt="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34">
+
+  <rsm:ExchangedDocumentContext>
+    <MessageStandardSpecifiedDocumentContextParameter>
+      <ID>eFTI</ID>
+      <SpecifiedDocumentVersion>
+        <ID>1.0</ID>
+      </SpecifiedDocumentVersion>
+    </MessageStandardSpecifiedDocumentContextParameter>
+  </rsm:ExchangedDocumentContext>
+
+  <rsm:ExchangedDocument>
+    <ID schemeID="RFC 9562-4">0f6c30b4-89b5-11f1-a20a-3c9c0f2eb459</ID>
+    <TypeCode>004</TypeCode>
+    <IssueDateTime>
+      <udt:DateTimeString format="207">202109240850+0000</udt:DateTimeString>
+    </IssueDateTime>
+    <RequestedSpecifiedQuery>
+      <ID schemeID="RFC 9562-4">17022113-89b5-11f1-bec0-3c9c0f2eb459</ID>
+    </RequestedSpecifiedQuery>
+  </rsm:ExchangedDocument>
+
+  <rsm:EFTIIDInformation>
+    <UniqueIDSetUniqueIDSet>
+      <GateID>POC</GateID>
+      <PlatformID>demo</PlatformID>
+      <DatasetID schemeID="RFC 9562-4">550e8400-e29b-41d4-a716-446655440000</DatasetID>
+      <ParameterIDSetCriteria>
+        <CarrierAcceptanceDateParameterScope>
+          <SpecifiedDateTime>
+            <udt:DateTimeString format="102">20210924</udt:DateTimeString>
+          </SpecifiedDateTime>
+        </CarrierAcceptanceDateParameterScope>
+        <CarrierAcceptanceCountryParameterScope>
+          <CountryID>DE</CountryID>
+        </CarrierAcceptanceCountryParameterScope>
+
+        <DeliveryDateParameterScope>
+          <SpecifiedDateTime>
+            <udt:DateTimeString format="102">20260924</udt:DateTimeString>
+          </SpecifiedDateTime>
+        </DeliveryDateParameterScope>
+        <DeliveryCountryParameterScope>
+          <CountryID>EE</CountryID>
+        </DeliveryCountryParameterScope>
+
+        <DangerousGoodsIndicationCodeParameterScope>
+          <DangerousGoodsIndicationParameterCode>2</DangerousGoodsIndicationParameterCode>
+        </DangerousGoodsIndicationCodeParameterScope>
+
+        <MainCarriageTransportMeansIDParameterScope>
+          <ID>VESSEL-001</ID>
+        </MainCarriageTransportMeansIDParameterScope>
+        <MainCarriageModeCodeParameterScope>
+          <TransportModeParameterCode>1</TransportModeParameterCode>
+        </MainCarriageModeCodeParameterScope>
+        <MainCarriageTransportMeansTypeCodeParameterScope>
+          <TransportMeansParameterCode>1513</TransportMeansParameterCode>
+        </MainCarriageTransportMeansTypeCodeParameterScope>
+        <TransportMeansRegistrationCountryParameterScope>
+          <CountryID>DE</CountryID>
+        </TransportMeansRegistrationCountryParameterScope>
+        <MainCarriageLoadingDateParameterScope>
+          <SpecifiedDateTime>
+            <udt:DateTimeString format="102">20210924</udt:DateTimeString>
+          </SpecifiedDateTime>
+        </MainCarriageLoadingDateParameterScope>
+        <MainCarriageLoadingCountryParameterScope>
+          <CountryID>FI</CountryID>
+        </MainCarriageLoadingCountryParameterScope>
+        <MainCarriageUnloadingDateParameterScope>
+          <SpecifiedDateTime>
+            <udt:DateTimeString format="102">20210924</udt:DateTimeString>
+          </SpecifiedDateTime>
+        </MainCarriageUnloadingDateParameterScope>
+        <MainCarriageUnloadingCountryParameterScope>
+          <CountryID>AE</CountryID>
+        </MainCarriageUnloadingCountryParameterScope>
+
+        <UsedTransportEquipmentIDParameterScope>
+          <ID>TE-001</ID>
+          <ID>TE-002</ID>
+        </UsedTransportEquipmentIDParameterScope>
+        <UsedTransportEquipmentCategoryCodeParameterScope>
+          <TransportEquipmentCategoryParameterCode>T10</TransportEquipmentCategoryParameterCode>
+          <TransportEquipmentCategoryParameterCode>T10</TransportEquipmentCategoryParameterCode>
+        </UsedTransportEquipmentCategoryCodeParameterScope>
+        <UsedTransportEquipmentRegistrationCountryParameterScope>
+          <CountryID>DE</CountryID>
+          <CountryID>DE</CountryID>
+        </UsedTransportEquipmentRegistrationCountryParameterScope>
+        <UsedTransportEquipmentSequenceNumberParameterScope>
+          <SequenceNumeric>1</SequenceNumeric>
+          <SequenceNumeric>2</SequenceNumeric>
+        </UsedTransportEquipmentSequenceNumberParameterScope>
+
+        <CarriedTransportEquipmentIDParameterScope>
+          <ID>TE-003</ID>
+          <ID>TE-004</ID>
+        </CarriedTransportEquipmentIDParameterScope>
+        <CarriedTransportEquipmentCategoryCodeParameterScope>
+          <TransportEquipmentCategoryParameterCode>BPR</TransportEquipmentCategoryParameterCode>
+          <TransportEquipmentCategoryParameterCode>BPR</TransportEquipmentCategoryParameterCode>
+        </CarriedTransportEquipmentCategoryCodeParameterScope>
+        <CarriedTransportEquipmentSequenceNumberParameterScope>
+          <SequenceNumeric>3</SequenceNumeric>
+          <SequenceNumeric>4</SequenceNumeric>
+        </CarriedTransportEquipmentSequenceNumberParameterScope>
+      </ParameterIDSetCriteria>
+    </UniqueIDSetUniqueIDSet>
+  </rsm:EFTIIDInformation>
+
+</rsm:FTI004UploadIdentifierRequest>

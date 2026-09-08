@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This schema file corresponds to the eFTI Delegated Act (EU) 2024/2024 (known as V1.0)-->
+<xs:schema xmlns:qdt="urn:eu:move:eFTI:data:standard:QualifiedDataType:34"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:eu:move:eFTI:data:standard:QualifiedDataType:34"
+           elementFormDefault="qualified"
+           version="beta">
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34" schemaLocation="FTI009s_urn_eu_move_eFTI_data_standard_UnqualifiedDataType_34.xsd"/>
+  <xs:complexType name="CountryIDType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_2"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="token">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="009"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_2">
+    <xs:restriction base="xs:token">
+      <xs:length value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

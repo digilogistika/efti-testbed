@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This schema file corresponds to the eFTI Delegated Act (EU) 2024/2024 (known as V1.0)-->
+<xs:schema xmlns:rsm="urn:eu:move:eFTI:data:standard:FTI029UploadIdentifierResponse:1"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ram="urn:eu:move:eFTI:data:standard:ReusableAggregateBusinessInformationEntity:34"
+           targetNamespace="urn:eu:move:eFTI:data:standard:FTI029UploadIdentifierResponse:1"
+           elementFormDefault="qualified"
+           version="beta">
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:QualifiedDataType:34" schemaLocation="FTI029s_urn_eu_move_eFTI_data_standard_QualifiedDataType_34.xsd"/>
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:ReusableAggregateBusinessInformationEntity:34" schemaLocation="FTI029s_urn_eu_move_eFTI_data_standard_ReusableAggregateBusinessInformationEntity_34.xsd"/>
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34" schemaLocation="FTI029s_urn_eu_move_eFTI_data_standard_UnqualifiedDataType_34.xsd"/>
+  <xs:element name="FTI029UploadIdentifierResponse" type="rsm:FTI029UploadIdentifierResponseType"/>
+  <xs:complexType name="FTI029UploadIdentifierResponseType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>eFTI message content</eFTI_BN>
+        <eFTI_ID>ASBIE1026</eFTI_ID>
+        <eFTI_DEF>eFTI message content.</eFTI_DEF>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ExchangedDocumentContext" type="ram:ExchangedDocumentContextType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2130</eFTI_ID>
+            <eFTI_DEF>The eFTI Regulation context for this eFTI message.</eFTI_DEF>
+            <eFTI_BN>eFTI Message Context</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExchangedDocument" type="ram:ExchangedDocumentType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_BN>eFTI Message Header</eFTI_BN>
+            <eFTI_ID>ASBIE1859</eFTI_ID>
+            <eFTI_DEF>The eFTI data set header information.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EFTIIDInformation" type="ram:EFTIIDInformationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2008</eFTI_ID>
+            <eFTI_DEF>eFTI related identifiers and related search parameters.</eFTI_DEF>
+            <eFTI_BN>eFTI Identifiers</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

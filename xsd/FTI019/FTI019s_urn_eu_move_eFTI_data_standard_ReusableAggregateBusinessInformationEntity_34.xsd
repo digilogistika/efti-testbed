@@ -1,0 +1,962 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This schema file corresponds to the eFTI Delegated Act (EU) 2024/2024 (known as V1.0)-->
+<xs:schema xmlns:ram="urn:eu:move:eFTI:data:standard:ReusableAggregateBusinessInformationEntity:34"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:qdt="urn:eu:move:eFTI:data:standard:QualifiedDataType:34"
+    xmlns:udt="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34"
+    targetNamespace="urn:eu:move:eFTI:data:standard:ReusableAggregateBusinessInformationEntity:34"
+    elementFormDefault="qualified"
+    version="beta">
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:QualifiedDataType:34" schemaLocation="FTI019s_urn_eu_move_eFTI_data_standard_QualifiedDataType_34.xsd"/>
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34" schemaLocation="FTI019s_urn_eu_move_eFTI_data_standard_UnqualifiedDataType_34.xsd"/>
+  <xs:complexType name="DocumentContextParameterType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Document Context Parameter</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType" fixed="eFTI">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2012</eFTI_ID>
+            <eFTI_DEF>The identification of the applicable eFTI Regulation.</eFTI_DEF>
+            <eFTI_BN>ID</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedDocumentVersion" type="ram:DocumentVersionType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2134</eFTI_ID>
+            <eFTI_BN>eFTI Regulation Standard Version</eFTI_BN>
+            <eFTI_DEF>The version of the eFTI Regulation version applicable for this eFTI message.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DocumentVersionType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Document Version</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType_2" fixed="1.0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2013</eFTI_ID>
+            <eFTI_DEF>The identification of this eFTI Regulation version.</eFTI_DEF>
+            <eFTI_BN>ID</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EFTIIDInformationType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>eFTI Identifiers</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ParameterSearchCriteria" type="ram:SearchCriteriaType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2159</eFTI_ID>
+            <eFTI_DEF>The requested search value for each search parameter.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExchangedDocumentContextType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Exchanged Document Context</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MessageStandardSpecifiedDocumentContextParameter" type="ram:DocumentContextParameterType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2133</eFTI_ID>
+            <eFTI_DEF>The eFTI Regulation applicable for this eFTI message.</eFTI_DEF>
+            <eFTI_BN>eFTI Applicable Regulation</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExchangedDocumentType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Exchanged Document</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType_3">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_DEF>The unique identifier of the instance of a message type.</eFTI_DEF>
+            <eFTI_BN>Message instance ID</eFTI_BN>
+            <eFTI_ID>eFTI1</eFTI_ID>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TypeCode" type="qdt:DocumentCodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_BN>eFTI payload type code</eFTI_BN>
+            <eFTI_CL>CL-057</eFTI_CL>
+            <eFTI_ID>eFTI2</eFTI_ID>
+            <eFTI_DEF> The code identifying the eFTI message type.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IssueDateTime" type="udt:DateTimeType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI4</eFTI_ID>
+            <eFTI_BN>Payload time stamp</eFTI_BN>
+            <eFTI_DEF>The timestamp identifying the moment at which this message instance was sent.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RequestedSpecifiedQuery" type="ram:SpecifiedQueryType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_BN>End-to-end transaction information</eFTI_BN>
+            <eFTI_ID>ASBIE1866</eFTI_ID>
+            <eFTI_DEF>An end to end transaction identifier for this eFTI message, assigned by the initiator party.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RequesterTradeParty" type="ram:TradePartyType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE1868</eFTI_ID>
+            <eFTI_BN>Requester</eFTI_BN>
+            <eFTI_DEF>The party that requests this exchanged data set.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2078</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedDateTime" type="udt:DateTimeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2080</eFTI_ID>
+            <eFTI_DEF>Actual date of acceptance/takeover for this consignment movement, in the time zone of the location of acceptance/takeover.</eFTI_DEF>
+            <eFTI_BN>Carrier Acceptance Date Time</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_10">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2100</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedDateTime" type="udt:DateTimeType_4">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2102</eFTI_ID>
+            <eFTI_BN>Main Carriage Loading Date</eFTI_BN>
+            <eFTI_DEF>Actual date of loading for this consignment movement, in the time zone of the location of loading. </eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_11">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2104</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CountryID" type="qdt:CountryIDType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2220</eFTI_ID>
+            <eFTI_CL>CL-017</eFTI_CL>
+            <eFTI_BN>Main Carriage Loading Country ID</eFTI_BN>
+            <eFTI_DEF>Code of the country of loading for this consignment movement.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_12">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2106</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedDateTime" type="udt:DateTimeType_5">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2108</eFTI_ID>
+            <eFTI_BN>Main Carriage Unloading Date</eFTI_BN>
+            <eFTI_DEF>Actual date of unloading for this consignment movement, in the time zone of the location of unloading. </eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_13">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2110</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CountryID" type="qdt:CountryIDType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2221</eFTI_ID>
+            <eFTI_CL>CL-017</eFTI_CL>
+            <eFTI_BN>Main Carriage Unloading Country ID</eFTI_BN>
+            <eFTI_DEF>Code of the country of unloading for this consignment movement.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_14">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2112</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ID" type="udt:IDType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2222</eFTI_ID>
+            <eFTI_BN>Used Transport Equipment ID</eFTI_BN>
+            <eFTI_DEF>Identifier of the used transport equipment.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_15">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2114</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransportEquipmentCategoryParameterCode" type="qdt:TransportEquipmentCategoryCodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2224</eFTI_ID>
+            <eFTI_CL>CL-033</eFTI_CL>
+            <eFTI_BN>Used Transport Equipment Category Code</eFTI_BN>
+            <eFTI_DEF>Code specifying the category for the used transport equipment.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_16">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2116</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CountryID" type="qdt:CountryIDType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2225</eFTI_ID>
+            <eFTI_CL>CL-017</eFTI_CL>
+            <eFTI_DEF>Country code of the registration country of the used transport equipment.</eFTI_DEF>
+            <eFTI_BN>Used Transport Equipment Registration Country ID</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_17">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2118</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SequenceNumeric" type="udt:NumericType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2227</eFTI_ID>
+            <eFTI_BN>Used Transport Equipment Sequence Number</eFTI_BN>
+            <eFTI_DEF>The sequence number differentiating this piece of logistics transport equipment from others in a set of used transport equipment.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_18">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2120</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ID" type="udt:IDType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2228</eFTI_ID>
+            <eFTI_BN>Carried Transport Equipment ID</eFTI_BN>
+            <eFTI_DEF>The identifier of this piece of carried logistics transport equipment including the code of the agency responsible for the identifier scheme when known e.g. BIC container identification, etc.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_19">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2122</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransportEquipmentCategoryParameterCode" type="qdt:TransportEquipmentCategoryCodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2230</eFTI_ID>
+            <eFTI_CL>CL-033</eFTI_CL>
+            <eFTI_DEF>Code specifying the category for the carried transport equipment.</eFTI_DEF>
+            <eFTI_BN>Carried Transport Equipment Category Code</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_2">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2082</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CountryID" type="qdt:CountryIDType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2208</eFTI_ID>
+            <eFTI_CL>CL-017</eFTI_CL>
+            <eFTI_DEF>Code of the country of acceptance/ takeover for this consignment movement.</eFTI_DEF>
+            <eFTI_BN>Carrier Acceptance Country Code</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_20">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2124</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SequenceNumeric" type="udt:NumericType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2235</eFTI_ID>
+            <eFTI_BN>Carried Transport Equipment Sequence Number</eFTI_BN>
+            <eFTI_DEF>The sequence number differentiating this piece of logistics transport equipment from others in a set of carried transport equipment.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_3">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2084</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedDateTime" type="udt:DateTimeType_3">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2086</eFTI_ID>
+            <eFTI_DEF>Actual date of delivery/handover for this consignment movement, in the time zone of the location of delivery/ handover.</eFTI_DEF>
+            <eFTI_BN>Actual Date Time of Delivery</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_4">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2088</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CountryID" type="qdt:CountryIDType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2209</eFTI_ID>
+            <eFTI_CL>CL-017</eFTI_CL>
+            <eFTI_BN>Consignee Receipt Country Code</eFTI_BN>
+            <eFTI_DEF>Code of the country of delivery/ handover for this consignment movement.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_5">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2090</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DangerousGoodsIndicationParameterCode" type="udt:CodeType_3">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2210</eFTI_ID>
+            <eFTI_CL>CL-058</eFTI_CL>
+            <eFTI_DEF>Code specifying the indication of dangerous goods included in the consignment movement.</eFTI_DEF>
+            <eFTI_BN>Dangerous Goods Indication Code</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_6">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2092</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ID" type="udt:IDType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2211</eFTI_ID>
+            <eFTI_DEF>Identifier of the main carriage means of transport.</eFTI_DEF>
+            <eFTI_BN>Main Carriage Transport Means ID</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_7">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2094</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransportModeParameterCode" type="qdt:TransportModeCodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2213</eFTI_ID>
+            <eFTI_CL>CL-037</eFTI_CL>
+            <eFTI_BN>Main Carriage Transport Mode Code</eFTI_BN>
+            <eFTI_DEF>Code specifying the mode of transport for this consignment movement.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_8">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2096</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransportMeansParameterCode" type="qdt:TransportMeansTypeCodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2215</eFTI_ID>
+            <eFTI_CL>CL-041</eFTI_CL>
+            <eFTI_BN>Means of transport type code</eFTI_BN>
+            <eFTI_DEF>Code specifying the type of means of transport.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ScopeType_9">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Search Scope</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="SubtypeCode" type="udt:CodeType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2098</eFTI_ID>
+            <eFTI_CL>CL-066</eFTI_CL>
+            <eFTI_BN>Requested Search Action Code</eFTI_BN>
+            <eFTI_DEF>The code specifying the requested search parameter action or actions.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CountryID" type="qdt:CountryIDType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2219</eFTI_ID>
+            <eFTI_CL>CL-017</eFTI_CL>
+            <eFTI_BN>Transport Means Registration Country ID</eFTI_BN>
+            <eFTI_DEF>Country code of the registration country of the transport means.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SearchCriteriaType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Identifier Search Criteria</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CarrierAcceptanceDateParameterScope" type="ram:ScopeType" minOccurs="0" maxOccurs="2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2160</eFTI_ID>
+            <eFTI_DEF>Carrier acceptance date search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI39</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CarrierAcceptanceCountryParameterScope" type="ram:ScopeType_2" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2161</eFTI_ID>
+            <eFTI_DEF>Carrier acceptance country code search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI146</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DeliveryDateParameterScope" type="ram:ScopeType_3" minOccurs="0" maxOccurs="2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2162</eFTI_ID>
+            <eFTI_DEF>Consignment movement delivery date search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI188</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DeliveryCountryParameterScope" type="ram:ScopeType_4" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2163</eFTI_ID>
+            <eFTI_DEF>Consignee receipt country code search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI162</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DangerousGoodsIndicationCodeParameterScope" type="ram:ScopeType_5" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2164</eFTI_ID>
+            <eFTI_DEF>Dangerous goods indication code search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI1855</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MainCarriageTransportMeansIDParameterScope" type="ram:ScopeType_6" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2165</eFTI_ID>
+            <eFTI_DEF>Main carriage transport means identifier search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI618</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MainCarriageModeCodeParameterScope" type="ram:ScopeType_7" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2166</eFTI_ID>
+            <eFTI_DEF>Main carriage transport mode search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI581</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MainCarriageTransportMeansTypeCodeParameterScope" type="ram:ScopeType_8" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2167</eFTI_ID>
+            <eFTI_DEF>Main carriage transport means type code search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI617</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TransportMeansRegistrationCountryParameterScope" type="ram:ScopeType_9" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2168</eFTI_ID>
+            <eFTI_DEF>Main carriage transport means registration country code search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI620</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MainCarriageLoadingDateParameterScope" type="ram:ScopeType_10" minOccurs="0" maxOccurs="2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2169</eFTI_ID>
+            <eFTI_DEF>Main carriage loading date search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI583</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MainCarriageLoadingCountryParameterScope" type="ram:ScopeType_11" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2170</eFTI_ID>
+            <eFTI_DEF>Main carriage loading country code search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI908</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MainCarriageUnloadingDateParameterScope" type="ram:ScopeType_12" minOccurs="0" maxOccurs="2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2171</eFTI_ID>
+            <eFTI_DEF>Main carriage unloading date search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI596</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MainCarriageUnloadingCountryParameterScope" type="ram:ScopeType_13" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2172</eFTI_ID>
+            <eFTI_DEF>Main carriage unloading country code search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI917</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UsedTransportEquipmentIDParameterScope" type="ram:ScopeType_14" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2173</eFTI_ID>
+            <eFTI_DEF>Used transport equipment identifier search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI374</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UsedTransportEquipmentCategoryCodeParameterScope" type="ram:ScopeType_15" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2174</eFTI_ID>
+            <eFTI_DEF>Used transport equipment category code search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI378</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UsedTransportEquipmentRegistrationCountryParameterScope" type="ram:ScopeType_16" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2175</eFTI_ID>
+            <eFTI_DEF>Used transport equipment registration country code search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI578</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="UsedTransportEquipmentSequenceNumberParameterScope" type="ram:ScopeType_17" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2176</eFTI_ID>
+            <eFTI_DEF>Used transport equipment sequence search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI987</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CarriedTransportEquipmentIDParameterScope" type="ram:ScopeType_18" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2177</eFTI_ID>
+            <eFTI_DEF>Carried transport equipment identifier search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI448</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CarriedTransportEquipmentCategoryCodeParameterScope" type="ram:ScopeType_19" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2178</eFTI_ID>
+            <eFTI_DEF>Carried transport equipment category code search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI450</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="CarriedTransportEquipmentSequenceNumberParameterScope" type="ram:ScopeType_20" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2179</eFTI_ID>
+            <eFTI_DEF>Carried transport equipment sequence search parameter.</eFTI_DEF>
+            <eFTI_BN>References to eFTI1000</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SpecifiedQueryType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Query</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType_4">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_BN>End-to-end transaction ID</eFTI_BN>
+            <eFTI_ID>eFTI1794</eFTI_ID>
+            <eFTI_DEF> Identifier of the end to end eFTI message exchange operation. </eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TradeAddressType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Trade Address</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CountryID" type="qdt:CountryIDType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_BN>Country code</eFTI_BN>
+            <eFTI_CL>CL-017</eFTI_CL>
+            <eFTI_ID>eFTI1844</eFTI_ID>
+            <eFTI_DEF>The country code of this requester party address.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TradePartyType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Trade Party</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PostalTradeAddress" type="ram:TradeAddressType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE1871</eFTI_ID>
+            <eFTI_DEF>The postal address of the requester party.</eFTI_DEF>
+            <eFTI_BN>Postal Address</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

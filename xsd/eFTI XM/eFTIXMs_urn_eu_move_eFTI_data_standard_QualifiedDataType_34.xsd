@@ -1,0 +1,2269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This schema file corresponds to the eFTI Delegated Act (EU) 2024/2024 (known as V1.0)-->
+<xs:schema xmlns:qdt="urn:eu:move:eFTI:data:standard:QualifiedDataType:34"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:udt="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34"
+    targetNamespace="urn:eu:move:eFTI:data:standard:QualifiedDataType:34"
+    elementFormDefault="qualified"
+    version="beta">
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34" schemaLocation="eFTIXMs_urn_eu_move_eFTI_data_standard_UnqualifiedDataType_34.xsd"/>
+  <xs:complexType name="CargoCommodityCategoryCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_4">
+        <xs:attribute name="listAgencyID" type="udt:CodeTypeListAgencyIDContentType_6" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_BN>Code list agency code</eFTI_BN>
+              <eFTI_DEF>The code of an agency that maintains one or more code lists.</eFTI_DEF>
+              <eFTI_CL>CL-029</eFTI_CL>
+              <eFTI_ID>eFTI702</eFTI_ID>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="ChargePayingPartyRoleCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AB"/>
+      <xs:enumeration value="AE"/>
+      <xs:enumeration value="AF"/>
+      <xs:enumeration value="AH"/>
+      <xs:enumeration value="AQ"/>
+      <xs:enumeration value="AR"/>
+      <xs:enumeration value="AT"/>
+      <xs:enumeration value="AU"/>
+      <xs:enumeration value="CA"/>
+      <xs:enumeration value="CG"/>
+      <xs:enumeration value="CN"/>
+      <xs:enumeration value="CPD"/>
+      <xs:enumeration value="CX"/>
+      <xs:enumeration value="CZ"/>
+      <xs:enumeration value="DGB"/>
+      <xs:enumeration value="EX"/>
+      <xs:enumeration value="FW"/>
+      <xs:enumeration value="GS"/>
+      <xs:enumeration value="IM"/>
+      <xs:enumeration value="IV"/>
+      <xs:enumeration value="PE"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ChargePayingPartyRoleCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:ChargePayingPartyRoleCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="CountryIDType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_3"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="DangerousGoodsPackagingLevelCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="I"/>
+      <xs:enumeration value="I-WHITE"/>
+      <xs:enumeration value="II"/>
+      <xs:enumeration value="II-YELLOW"/>
+      <xs:enumeration value="III"/>
+      <xs:enumeration value="III-Yellow"/>
+      <xs:enumeration value="None"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="10"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DangerousGoodsPackagingLevelCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:DangerousGoodsPackagingLevelCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="decimal">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="16"/>
+      <xs:fractionDigits value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="decimal_2">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="decimal_3">
+    <xs:restriction base="xs:decimal">
+      <xs:totalDigits value="16"/>
+      <xs:fractionDigits value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DocumentCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentCodeType_2">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_5"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentCodeType_3">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_6"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentCodeType_4">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_8"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentCodeType_5">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_10"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentCodeType_6">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_12"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentCodeType_7">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_14"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentCodeType_8">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_16"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentStatusCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_2"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DurationUnitMeasureType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal_2">
+        <xs:attribute name="unitCode" type="qdt:DurationUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1407</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DurationUnitMeasureType_2">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal_2">
+        <xs:attribute name="unitCode" type="qdt:DurationUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1202</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="DurationUnitMeasureUnitCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="DAY"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="FreightChargeTypeIDType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_7"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="LinearUnitMeasureType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:LinearUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI888</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="LinearUnitMeasureType_2">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:LinearUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI890</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="LinearUnitMeasureType_3">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:LinearUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI892</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="LinearUnitMeasureType_4">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:LinearUnitMeasureUnitCodeContentType_2" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1262</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="LinearUnitMeasureType_5">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:LinearUnitMeasureUnitCodeContentType_2" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1264</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="LinearUnitMeasureType_6">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:LinearUnitMeasureUnitCodeContentType_2" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1266</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="LinearUnitMeasureUnitCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="MTR"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="LinearUnitMeasureUnitCodeContentType_2">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="CMT"/>
+      <xs:enumeration value="FOT"/>
+      <xs:enumeration value="INH"/>
+      <xs:enumeration value="MTR"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="LogisticsChargeCalculationBasisCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_4">
+        <xs:attribute name="listAgencyID" type="udt:CodeTypeListAgencyIDContentType_5" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1365</eFTI_ID>
+              <eFTI_CL>CL-029</eFTI_CL>
+              <eFTI_DEF>The code of an agency that maintains one or more code lists.</eFTI_DEF>
+              <eFTI_BN>Code list agency code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="PackageTypeCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_7"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="PackageTypeCodeType_2">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_4"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="PartyRoleCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="EV"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="PartyRoleCodeContentType_2">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="POA"/>
+      <xs:enumeration value="T1"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="PartyRoleCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:PartyRoleCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="PartyRoleCodeType_2">
+    <xs:simpleContent>
+      <xs:extension base="qdt:PartyRoleCodeContentType_2"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="ReferenceCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AAA"/>
+      <xs:enumeration value="AAB"/>
+      <xs:enumeration value="AAC"/>
+      <xs:enumeration value="AAD"/>
+      <xs:enumeration value="AAE"/>
+      <xs:enumeration value="AAF"/>
+      <xs:enumeration value="AAG"/>
+      <xs:enumeration value="AAH"/>
+      <xs:enumeration value="AAI"/>
+      <xs:enumeration value="AAJ"/>
+      <xs:enumeration value="AAK"/>
+      <xs:enumeration value="AAL"/>
+      <xs:enumeration value="AAM"/>
+      <xs:enumeration value="AAN"/>
+      <xs:enumeration value="AAO"/>
+      <xs:enumeration value="AAP"/>
+      <xs:enumeration value="AAQ"/>
+      <xs:enumeration value="AAR"/>
+      <xs:enumeration value="AAS"/>
+      <xs:enumeration value="AAT"/>
+      <xs:enumeration value="AAU"/>
+      <xs:enumeration value="AAV"/>
+      <xs:enumeration value="AAW"/>
+      <xs:enumeration value="AAX"/>
+      <xs:enumeration value="AAY"/>
+      <xs:enumeration value="AAZ"/>
+      <xs:enumeration value="ABA"/>
+      <xs:enumeration value="ABB"/>
+      <xs:enumeration value="ABC"/>
+      <xs:enumeration value="ABD"/>
+      <xs:enumeration value="ABE"/>
+      <xs:enumeration value="ABF"/>
+      <xs:enumeration value="ABG"/>
+      <xs:enumeration value="ABH"/>
+      <xs:enumeration value="ABI"/>
+      <xs:enumeration value="ABJ"/>
+      <xs:enumeration value="ABK"/>
+      <xs:enumeration value="ABL"/>
+      <xs:enumeration value="ABM"/>
+      <xs:enumeration value="ABN"/>
+      <xs:enumeration value="ABO"/>
+      <xs:enumeration value="ABP"/>
+      <xs:enumeration value="ABQ"/>
+      <xs:enumeration value="ABR"/>
+      <xs:enumeration value="ABS"/>
+      <xs:enumeration value="ABT"/>
+      <xs:enumeration value="ABU"/>
+      <xs:enumeration value="ABV"/>
+      <xs:enumeration value="ABW"/>
+      <xs:enumeration value="ABX"/>
+      <xs:enumeration value="ABY"/>
+      <xs:enumeration value="ABZ"/>
+      <xs:enumeration value="AC"/>
+      <xs:enumeration value="ACA"/>
+      <xs:enumeration value="ACB"/>
+      <xs:enumeration value="ACC"/>
+      <xs:enumeration value="ACD"/>
+      <xs:enumeration value="ACE"/>
+      <xs:enumeration value="ACF"/>
+      <xs:enumeration value="ACG"/>
+      <xs:enumeration value="ACH"/>
+      <xs:enumeration value="ACI"/>
+      <xs:enumeration value="ACJ"/>
+      <xs:enumeration value="ACK"/>
+      <xs:enumeration value="ACL"/>
+      <xs:enumeration value="ACN"/>
+      <xs:enumeration value="ACO"/>
+      <xs:enumeration value="ACP"/>
+      <xs:enumeration value="ACQ"/>
+      <xs:enumeration value="ACR"/>
+      <xs:enumeration value="ACT"/>
+      <xs:enumeration value="ACU"/>
+      <xs:enumeration value="ACV"/>
+      <xs:enumeration value="ACW"/>
+      <xs:enumeration value="ACX"/>
+      <xs:enumeration value="ACY"/>
+      <xs:enumeration value="ACZ"/>
+      <xs:enumeration value="ADA"/>
+      <xs:enumeration value="ADB"/>
+      <xs:enumeration value="ADC"/>
+      <xs:enumeration value="ADD"/>
+      <xs:enumeration value="ADE"/>
+      <xs:enumeration value="ADF"/>
+      <xs:enumeration value="ADG"/>
+      <xs:enumeration value="ADI"/>
+      <xs:enumeration value="ADJ"/>
+      <xs:enumeration value="ADK"/>
+      <xs:enumeration value="ADL"/>
+      <xs:enumeration value="ADM"/>
+      <xs:enumeration value="ADN"/>
+      <xs:enumeration value="ADO"/>
+      <xs:enumeration value="ADP"/>
+      <xs:enumeration value="ADQ"/>
+      <xs:enumeration value="ADT"/>
+      <xs:enumeration value="ADU"/>
+      <xs:enumeration value="ADV"/>
+      <xs:enumeration value="ADW"/>
+      <xs:enumeration value="ADX"/>
+      <xs:enumeration value="ADY"/>
+      <xs:enumeration value="ADZ"/>
+      <xs:enumeration value="AE"/>
+      <xs:enumeration value="AEA"/>
+      <xs:enumeration value="AEB"/>
+      <xs:enumeration value="AEC"/>
+      <xs:enumeration value="AED"/>
+      <xs:enumeration value="AEE"/>
+      <xs:enumeration value="AEF"/>
+      <xs:enumeration value="AEG"/>
+      <xs:enumeration value="AEH"/>
+      <xs:enumeration value="AEI"/>
+      <xs:enumeration value="AEJ"/>
+      <xs:enumeration value="AEK"/>
+      <xs:enumeration value="AEL"/>
+      <xs:enumeration value="AEM"/>
+      <xs:enumeration value="AEN"/>
+      <xs:enumeration value="AEO"/>
+      <xs:enumeration value="AEP"/>
+      <xs:enumeration value="AEQ"/>
+      <xs:enumeration value="AER"/>
+      <xs:enumeration value="AES"/>
+      <xs:enumeration value="AET"/>
+      <xs:enumeration value="AEU"/>
+      <xs:enumeration value="AEV"/>
+      <xs:enumeration value="AEW"/>
+      <xs:enumeration value="AEX"/>
+      <xs:enumeration value="AEY"/>
+      <xs:enumeration value="AEZ"/>
+      <xs:enumeration value="AF"/>
+      <xs:enumeration value="AFA"/>
+      <xs:enumeration value="AFB"/>
+      <xs:enumeration value="AFC"/>
+      <xs:enumeration value="AFD"/>
+      <xs:enumeration value="AFE"/>
+      <xs:enumeration value="AFF"/>
+      <xs:enumeration value="AFG"/>
+      <xs:enumeration value="AFH"/>
+      <xs:enumeration value="AFI"/>
+      <xs:enumeration value="AFJ"/>
+      <xs:enumeration value="AFK"/>
+      <xs:enumeration value="AFL"/>
+      <xs:enumeration value="AFM"/>
+      <xs:enumeration value="AFN"/>
+      <xs:enumeration value="AFO"/>
+      <xs:enumeration value="AFP"/>
+      <xs:enumeration value="AFQ"/>
+      <xs:enumeration value="AFR"/>
+      <xs:enumeration value="AFS"/>
+      <xs:enumeration value="AFT"/>
+      <xs:enumeration value="AFU"/>
+      <xs:enumeration value="AFV"/>
+      <xs:enumeration value="AFW"/>
+      <xs:enumeration value="AFX"/>
+      <xs:enumeration value="AFY"/>
+      <xs:enumeration value="AFZ"/>
+      <xs:enumeration value="AGA"/>
+      <xs:enumeration value="AGB"/>
+      <xs:enumeration value="AGC"/>
+      <xs:enumeration value="AGD"/>
+      <xs:enumeration value="AGE"/>
+      <xs:enumeration value="AGF"/>
+      <xs:enumeration value="AGG"/>
+      <xs:enumeration value="AGH"/>
+      <xs:enumeration value="AGI"/>
+      <xs:enumeration value="AGJ"/>
+      <xs:enumeration value="AGK"/>
+      <xs:enumeration value="AGL"/>
+      <xs:enumeration value="AGM"/>
+      <xs:enumeration value="AGN"/>
+      <xs:enumeration value="AGO"/>
+      <xs:enumeration value="AGP"/>
+      <xs:enumeration value="AGQ"/>
+      <xs:enumeration value="AGR"/>
+      <xs:enumeration value="AGS"/>
+      <xs:enumeration value="AGT"/>
+      <xs:enumeration value="AGU"/>
+      <xs:enumeration value="AGV"/>
+      <xs:enumeration value="AGW"/>
+      <xs:enumeration value="AGX"/>
+      <xs:enumeration value="AGY"/>
+      <xs:enumeration value="AGZ"/>
+      <xs:enumeration value="AHA"/>
+      <xs:enumeration value="AHB"/>
+      <xs:enumeration value="AHC"/>
+      <xs:enumeration value="AHD"/>
+      <xs:enumeration value="AHE"/>
+      <xs:enumeration value="AHF"/>
+      <xs:enumeration value="AHG"/>
+      <xs:enumeration value="AHH"/>
+      <xs:enumeration value="AHI"/>
+      <xs:enumeration value="AHJ"/>
+      <xs:enumeration value="AHK"/>
+      <xs:enumeration value="AHL"/>
+      <xs:enumeration value="AHM"/>
+      <xs:enumeration value="AHN"/>
+      <xs:enumeration value="AHO"/>
+      <xs:enumeration value="AHP"/>
+      <xs:enumeration value="AHQ"/>
+      <xs:enumeration value="AHR"/>
+      <xs:enumeration value="AHS"/>
+      <xs:enumeration value="AHT"/>
+      <xs:enumeration value="AHU"/>
+      <xs:enumeration value="AHV"/>
+      <xs:enumeration value="AHX"/>
+      <xs:enumeration value="AHY"/>
+      <xs:enumeration value="AHZ"/>
+      <xs:enumeration value="AIA"/>
+      <xs:enumeration value="AIB"/>
+      <xs:enumeration value="AIC"/>
+      <xs:enumeration value="AID"/>
+      <xs:enumeration value="AIE"/>
+      <xs:enumeration value="AIF"/>
+      <xs:enumeration value="AIG"/>
+      <xs:enumeration value="AIH"/>
+      <xs:enumeration value="AII"/>
+      <xs:enumeration value="AIJ"/>
+      <xs:enumeration value="AIK"/>
+      <xs:enumeration value="AIL"/>
+      <xs:enumeration value="AIM"/>
+      <xs:enumeration value="AIN"/>
+      <xs:enumeration value="AIO"/>
+      <xs:enumeration value="AIP"/>
+      <xs:enumeration value="AIQ"/>
+      <xs:enumeration value="AIR"/>
+      <xs:enumeration value="AIS"/>
+      <xs:enumeration value="AIT"/>
+      <xs:enumeration value="AIU"/>
+      <xs:enumeration value="AIV"/>
+      <xs:enumeration value="AIW"/>
+      <xs:enumeration value="AIX"/>
+      <xs:enumeration value="AIY"/>
+      <xs:enumeration value="AIZ"/>
+      <xs:enumeration value="AJA"/>
+      <xs:enumeration value="AJB"/>
+      <xs:enumeration value="AJC"/>
+      <xs:enumeration value="AJD"/>
+      <xs:enumeration value="AJE"/>
+      <xs:enumeration value="AJF"/>
+      <xs:enumeration value="AJG"/>
+      <xs:enumeration value="AJH"/>
+      <xs:enumeration value="AJI"/>
+      <xs:enumeration value="AJJ"/>
+      <xs:enumeration value="AJK"/>
+      <xs:enumeration value="AJL"/>
+      <xs:enumeration value="AJM"/>
+      <xs:enumeration value="AJN"/>
+      <xs:enumeration value="AJO"/>
+      <xs:enumeration value="AJP"/>
+      <xs:enumeration value="AJQ"/>
+      <xs:enumeration value="AJR"/>
+      <xs:enumeration value="AJS"/>
+      <xs:enumeration value="AJT"/>
+      <xs:enumeration value="AJU"/>
+      <xs:enumeration value="AJV"/>
+      <xs:enumeration value="AJW"/>
+      <xs:enumeration value="AJX"/>
+      <xs:enumeration value="AJY"/>
+      <xs:enumeration value="AJZ"/>
+      <xs:enumeration value="AKA"/>
+      <xs:enumeration value="AKB"/>
+      <xs:enumeration value="AKC"/>
+      <xs:enumeration value="AKD"/>
+      <xs:enumeration value="AKE"/>
+      <xs:enumeration value="AKF"/>
+      <xs:enumeration value="AKG"/>
+      <xs:enumeration value="AKH"/>
+      <xs:enumeration value="AKI"/>
+      <xs:enumeration value="AKJ"/>
+      <xs:enumeration value="AKK"/>
+      <xs:enumeration value="AKL"/>
+      <xs:enumeration value="AKM"/>
+      <xs:enumeration value="AKN"/>
+      <xs:enumeration value="AKO"/>
+      <xs:enumeration value="AKP"/>
+      <xs:enumeration value="AKQ"/>
+      <xs:enumeration value="AKR"/>
+      <xs:enumeration value="AKS"/>
+      <xs:enumeration value="AKT"/>
+      <xs:enumeration value="AKU"/>
+      <xs:enumeration value="AKV"/>
+      <xs:enumeration value="AKW"/>
+      <xs:enumeration value="AKX"/>
+      <xs:enumeration value="AKY"/>
+      <xs:enumeration value="AKZ"/>
+      <xs:enumeration value="ALA"/>
+      <xs:enumeration value="ALB"/>
+      <xs:enumeration value="ALC"/>
+      <xs:enumeration value="ALD"/>
+      <xs:enumeration value="ALE"/>
+      <xs:enumeration value="ALF"/>
+      <xs:enumeration value="ALG"/>
+      <xs:enumeration value="ALH"/>
+      <xs:enumeration value="ALI"/>
+      <xs:enumeration value="ALJ"/>
+      <xs:enumeration value="ALK"/>
+      <xs:enumeration value="ALL"/>
+      <xs:enumeration value="ALM"/>
+      <xs:enumeration value="ALN"/>
+      <xs:enumeration value="ALO"/>
+      <xs:enumeration value="ALP"/>
+      <xs:enumeration value="ALQ"/>
+      <xs:enumeration value="ALR"/>
+      <xs:enumeration value="ALS"/>
+      <xs:enumeration value="ALT"/>
+      <xs:enumeration value="ALU"/>
+      <xs:enumeration value="ALV"/>
+      <xs:enumeration value="ALW"/>
+      <xs:enumeration value="ALX"/>
+      <xs:enumeration value="ALY"/>
+      <xs:enumeration value="ALZ"/>
+      <xs:enumeration value="AMA"/>
+      <xs:enumeration value="AMB"/>
+      <xs:enumeration value="AMC"/>
+      <xs:enumeration value="AMD"/>
+      <xs:enumeration value="AME"/>
+      <xs:enumeration value="AMF"/>
+      <xs:enumeration value="AMG"/>
+      <xs:enumeration value="AMH"/>
+      <xs:enumeration value="AMI"/>
+      <xs:enumeration value="AMJ"/>
+      <xs:enumeration value="AMK"/>
+      <xs:enumeration value="AML"/>
+      <xs:enumeration value="AMM"/>
+      <xs:enumeration value="AMN"/>
+      <xs:enumeration value="AMO"/>
+      <xs:enumeration value="AMP"/>
+      <xs:enumeration value="AMQ"/>
+      <xs:enumeration value="AMR"/>
+      <xs:enumeration value="AMS"/>
+      <xs:enumeration value="AMT"/>
+      <xs:enumeration value="AMU"/>
+      <xs:enumeration value="AMV"/>
+      <xs:enumeration value="AMW"/>
+      <xs:enumeration value="AMX"/>
+      <xs:enumeration value="AMY"/>
+      <xs:enumeration value="AMZ"/>
+      <xs:enumeration value="ANA"/>
+      <xs:enumeration value="ANB"/>
+      <xs:enumeration value="ANC"/>
+      <xs:enumeration value="AND"/>
+      <xs:enumeration value="ANE"/>
+      <xs:enumeration value="ANF"/>
+      <xs:enumeration value="ANG"/>
+      <xs:enumeration value="ANH"/>
+      <xs:enumeration value="ANI"/>
+      <xs:enumeration value="ANJ"/>
+      <xs:enumeration value="ANK"/>
+      <xs:enumeration value="ANL"/>
+      <xs:enumeration value="ANM"/>
+      <xs:enumeration value="ANN"/>
+      <xs:enumeration value="ANO"/>
+      <xs:enumeration value="ANP"/>
+      <xs:enumeration value="ANQ"/>
+      <xs:enumeration value="ANR"/>
+      <xs:enumeration value="ANS"/>
+      <xs:enumeration value="ANT"/>
+      <xs:enumeration value="ANU"/>
+      <xs:enumeration value="ANV"/>
+      <xs:enumeration value="ANW"/>
+      <xs:enumeration value="ANX"/>
+      <xs:enumeration value="ANY"/>
+      <xs:enumeration value="AOA"/>
+      <xs:enumeration value="AOD"/>
+      <xs:enumeration value="AOE"/>
+      <xs:enumeration value="AOF"/>
+      <xs:enumeration value="AOG"/>
+      <xs:enumeration value="AOH"/>
+      <xs:enumeration value="AOI"/>
+      <xs:enumeration value="AOJ"/>
+      <xs:enumeration value="AOK"/>
+      <xs:enumeration value="AOL"/>
+      <xs:enumeration value="AOM"/>
+      <xs:enumeration value="AON"/>
+      <xs:enumeration value="AOO"/>
+      <xs:enumeration value="AOP"/>
+      <xs:enumeration value="AOQ"/>
+      <xs:enumeration value="AOR"/>
+      <xs:enumeration value="AOS"/>
+      <xs:enumeration value="AOT"/>
+      <xs:enumeration value="AOU"/>
+      <xs:enumeration value="AOV"/>
+      <xs:enumeration value="AOW"/>
+      <xs:enumeration value="AOX"/>
+      <xs:enumeration value="AOY"/>
+      <xs:enumeration value="AOZ"/>
+      <xs:enumeration value="AP"/>
+      <xs:enumeration value="APA"/>
+      <xs:enumeration value="APB"/>
+      <xs:enumeration value="APC"/>
+      <xs:enumeration value="APD"/>
+      <xs:enumeration value="APE"/>
+      <xs:enumeration value="APF"/>
+      <xs:enumeration value="APG"/>
+      <xs:enumeration value="APH"/>
+      <xs:enumeration value="API"/>
+      <xs:enumeration value="APJ"/>
+      <xs:enumeration value="APK"/>
+      <xs:enumeration value="APL"/>
+      <xs:enumeration value="APM"/>
+      <xs:enumeration value="APN"/>
+      <xs:enumeration value="APO"/>
+      <xs:enumeration value="APP"/>
+      <xs:enumeration value="APQ"/>
+      <xs:enumeration value="APR"/>
+      <xs:enumeration value="APS"/>
+      <xs:enumeration value="APT"/>
+      <xs:enumeration value="APU"/>
+      <xs:enumeration value="APV"/>
+      <xs:enumeration value="APW"/>
+      <xs:enumeration value="APX"/>
+      <xs:enumeration value="APY"/>
+      <xs:enumeration value="APZ"/>
+      <xs:enumeration value="AQA"/>
+      <xs:enumeration value="AQB"/>
+      <xs:enumeration value="AQC"/>
+      <xs:enumeration value="AQD"/>
+      <xs:enumeration value="AQE"/>
+      <xs:enumeration value="AQF"/>
+      <xs:enumeration value="AQG"/>
+      <xs:enumeration value="AQH"/>
+      <xs:enumeration value="AQI"/>
+      <xs:enumeration value="AQJ"/>
+      <xs:enumeration value="AQK"/>
+      <xs:enumeration value="AQL"/>
+      <xs:enumeration value="AQM"/>
+      <xs:enumeration value="AQN"/>
+      <xs:enumeration value="AQO"/>
+      <xs:enumeration value="AQP"/>
+      <xs:enumeration value="AQQ"/>
+      <xs:enumeration value="AQR"/>
+      <xs:enumeration value="AQS"/>
+      <xs:enumeration value="AQT"/>
+      <xs:enumeration value="AQU"/>
+      <xs:enumeration value="AQV"/>
+      <xs:enumeration value="AQW"/>
+      <xs:enumeration value="AQX"/>
+      <xs:enumeration value="AQY"/>
+      <xs:enumeration value="AQZ"/>
+      <xs:enumeration value="ARA"/>
+      <xs:enumeration value="ARB"/>
+      <xs:enumeration value="ARC"/>
+      <xs:enumeration value="ARD"/>
+      <xs:enumeration value="ARE"/>
+      <xs:enumeration value="ARF"/>
+      <xs:enumeration value="ARG"/>
+      <xs:enumeration value="ARH"/>
+      <xs:enumeration value="ARI"/>
+      <xs:enumeration value="ARJ"/>
+      <xs:enumeration value="ARK"/>
+      <xs:enumeration value="ARL"/>
+      <xs:enumeration value="ARM"/>
+      <xs:enumeration value="ARN"/>
+      <xs:enumeration value="ARO"/>
+      <xs:enumeration value="ARP"/>
+      <xs:enumeration value="ARQ"/>
+      <xs:enumeration value="ARR"/>
+      <xs:enumeration value="ARS"/>
+      <xs:enumeration value="ART"/>
+      <xs:enumeration value="ARU"/>
+      <xs:enumeration value="ARV"/>
+      <xs:enumeration value="ARW"/>
+      <xs:enumeration value="ARX"/>
+      <xs:enumeration value="ARY"/>
+      <xs:enumeration value="ARZ"/>
+      <xs:enumeration value="ASA"/>
+      <xs:enumeration value="ASB"/>
+      <xs:enumeration value="ASC"/>
+      <xs:enumeration value="ASD"/>
+      <xs:enumeration value="ASE"/>
+      <xs:enumeration value="ASF"/>
+      <xs:enumeration value="ASG"/>
+      <xs:enumeration value="ASH"/>
+      <xs:enumeration value="ASI"/>
+      <xs:enumeration value="ASJ"/>
+      <xs:enumeration value="ASK"/>
+      <xs:enumeration value="ASL"/>
+      <xs:enumeration value="ASM"/>
+      <xs:enumeration value="ASN"/>
+      <xs:enumeration value="ASO"/>
+      <xs:enumeration value="ASP"/>
+      <xs:enumeration value="ASQ"/>
+      <xs:enumeration value="ASR"/>
+      <xs:enumeration value="ASS"/>
+      <xs:enumeration value="AST"/>
+      <xs:enumeration value="ASU"/>
+      <xs:enumeration value="ASV"/>
+      <xs:enumeration value="ASW"/>
+      <xs:enumeration value="ASX"/>
+      <xs:enumeration value="ASY"/>
+      <xs:enumeration value="ASZ"/>
+      <xs:enumeration value="ATA"/>
+      <xs:enumeration value="ATB"/>
+      <xs:enumeration value="ATC"/>
+      <xs:enumeration value="ATD"/>
+      <xs:enumeration value="ATE"/>
+      <xs:enumeration value="ATF"/>
+      <xs:enumeration value="ATG"/>
+      <xs:enumeration value="ATH"/>
+      <xs:enumeration value="ATI"/>
+      <xs:enumeration value="ATJ"/>
+      <xs:enumeration value="ATK"/>
+      <xs:enumeration value="ATL"/>
+      <xs:enumeration value="ATM"/>
+      <xs:enumeration value="ATN"/>
+      <xs:enumeration value="ATO"/>
+      <xs:enumeration value="ATP"/>
+      <xs:enumeration value="ATQ"/>
+      <xs:enumeration value="ATR"/>
+      <xs:enumeration value="ATS"/>
+      <xs:enumeration value="ATT"/>
+      <xs:enumeration value="ATU"/>
+      <xs:enumeration value="ATV"/>
+      <xs:enumeration value="ATW"/>
+      <xs:enumeration value="ATX"/>
+      <xs:enumeration value="ATY"/>
+      <xs:enumeration value="ATZ"/>
+      <xs:enumeration value="AU"/>
+      <xs:enumeration value="AUA"/>
+      <xs:enumeration value="AUB"/>
+      <xs:enumeration value="AUC"/>
+      <xs:enumeration value="AUD"/>
+      <xs:enumeration value="AUE"/>
+      <xs:enumeration value="AUF"/>
+      <xs:enumeration value="AUG"/>
+      <xs:enumeration value="AUH"/>
+      <xs:enumeration value="AUI"/>
+      <xs:enumeration value="AUJ"/>
+      <xs:enumeration value="AUK"/>
+      <xs:enumeration value="AUL"/>
+      <xs:enumeration value="AUM"/>
+      <xs:enumeration value="AUN"/>
+      <xs:enumeration value="AUO"/>
+      <xs:enumeration value="AUP"/>
+      <xs:enumeration value="AUQ"/>
+      <xs:enumeration value="AUR"/>
+      <xs:enumeration value="AUS"/>
+      <xs:enumeration value="AUT"/>
+      <xs:enumeration value="AUU"/>
+      <xs:enumeration value="AUV"/>
+      <xs:enumeration value="AUW"/>
+      <xs:enumeration value="AUX"/>
+      <xs:enumeration value="AUY"/>
+      <xs:enumeration value="AUZ"/>
+      <xs:enumeration value="AV"/>
+      <xs:enumeration value="AVA"/>
+      <xs:enumeration value="AVB"/>
+      <xs:enumeration value="AVC"/>
+      <xs:enumeration value="AVD"/>
+      <xs:enumeration value="AVE"/>
+      <xs:enumeration value="AVF"/>
+      <xs:enumeration value="AVG"/>
+      <xs:enumeration value="AVH"/>
+      <xs:enumeration value="AVI"/>
+      <xs:enumeration value="AVJ"/>
+      <xs:enumeration value="AVK"/>
+      <xs:enumeration value="AVL"/>
+      <xs:enumeration value="AVM"/>
+      <xs:enumeration value="AVN"/>
+      <xs:enumeration value="AVO"/>
+      <xs:enumeration value="AVP"/>
+      <xs:enumeration value="AVQ"/>
+      <xs:enumeration value="AVR"/>
+      <xs:enumeration value="AVS"/>
+      <xs:enumeration value="AVT"/>
+      <xs:enumeration value="AVU"/>
+      <xs:enumeration value="AVV"/>
+      <xs:enumeration value="AVW"/>
+      <xs:enumeration value="AVX"/>
+      <xs:enumeration value="AVY"/>
+      <xs:enumeration value="AVZ"/>
+      <xs:enumeration value="AWA"/>
+      <xs:enumeration value="AWB"/>
+      <xs:enumeration value="AWC"/>
+      <xs:enumeration value="AWD"/>
+      <xs:enumeration value="AWE"/>
+      <xs:enumeration value="AWF"/>
+      <xs:enumeration value="AWG"/>
+      <xs:enumeration value="AWH"/>
+      <xs:enumeration value="AWI"/>
+      <xs:enumeration value="AWJ"/>
+      <xs:enumeration value="AWK"/>
+      <xs:enumeration value="AWL"/>
+      <xs:enumeration value="AWM"/>
+      <xs:enumeration value="AWN"/>
+      <xs:enumeration value="AWO"/>
+      <xs:enumeration value="AWP"/>
+      <xs:enumeration value="AWQ"/>
+      <xs:enumeration value="AWR"/>
+      <xs:enumeration value="AWS"/>
+      <xs:enumeration value="AWT"/>
+      <xs:enumeration value="AWU"/>
+      <xs:enumeration value="AWV"/>
+      <xs:enumeration value="AWW"/>
+      <xs:enumeration value="AWX"/>
+      <xs:enumeration value="AWY"/>
+      <xs:enumeration value="AWZ"/>
+      <xs:enumeration value="AXA"/>
+      <xs:enumeration value="AXB"/>
+      <xs:enumeration value="AXC"/>
+      <xs:enumeration value="AXD"/>
+      <xs:enumeration value="AXE"/>
+      <xs:enumeration value="AXF"/>
+      <xs:enumeration value="AXG"/>
+      <xs:enumeration value="AXH"/>
+      <xs:enumeration value="AXI"/>
+      <xs:enumeration value="AXJ"/>
+      <xs:enumeration value="AXK"/>
+      <xs:enumeration value="AXL"/>
+      <xs:enumeration value="AXM"/>
+      <xs:enumeration value="AXN"/>
+      <xs:enumeration value="AXO"/>
+      <xs:enumeration value="AXP"/>
+      <xs:enumeration value="AXQ"/>
+      <xs:enumeration value="AXR"/>
+      <xs:enumeration value="AXS"/>
+      <xs:enumeration value="BA"/>
+      <xs:enumeration value="BC"/>
+      <xs:enumeration value="BD"/>
+      <xs:enumeration value="BE"/>
+      <xs:enumeration value="BH"/>
+      <xs:enumeration value="BM"/>
+      <xs:enumeration value="BN"/>
+      <xs:enumeration value="BO"/>
+      <xs:enumeration value="BR"/>
+      <xs:enumeration value="BT"/>
+      <xs:enumeration value="BTP"/>
+      <xs:enumeration value="BW"/>
+      <xs:enumeration value="CAS"/>
+      <xs:enumeration value="CAT"/>
+      <xs:enumeration value="CAU"/>
+      <xs:enumeration value="CAV"/>
+      <xs:enumeration value="CAW"/>
+      <xs:enumeration value="CAX"/>
+      <xs:enumeration value="CAY"/>
+      <xs:enumeration value="CAZ"/>
+      <xs:enumeration value="CBA"/>
+      <xs:enumeration value="CBB"/>
+      <xs:enumeration value="CD"/>
+      <xs:enumeration value="CEC"/>
+      <xs:enumeration value="CED"/>
+      <xs:enumeration value="CFE"/>
+      <xs:enumeration value="CFF"/>
+      <xs:enumeration value="CFO"/>
+      <xs:enumeration value="CG"/>
+      <xs:enumeration value="CH"/>
+      <xs:enumeration value="CK"/>
+      <xs:enumeration value="CKN"/>
+      <xs:enumeration value="CM"/>
+      <xs:enumeration value="CMR"/>
+      <xs:enumeration value="CN"/>
+      <xs:enumeration value="CNO"/>
+      <xs:enumeration value="COF"/>
+      <xs:enumeration value="CP"/>
+      <xs:enumeration value="CR"/>
+      <xs:enumeration value="CRN"/>
+      <xs:enumeration value="CS"/>
+      <xs:enumeration value="CST"/>
+      <xs:enumeration value="CT"/>
+      <xs:enumeration value="CU"/>
+      <xs:enumeration value="CV"/>
+      <xs:enumeration value="CW"/>
+      <xs:enumeration value="CZ"/>
+      <xs:enumeration value="DA"/>
+      <xs:enumeration value="DAN"/>
+      <xs:enumeration value="DB"/>
+      <xs:enumeration value="DI"/>
+      <xs:enumeration value="DL"/>
+      <xs:enumeration value="DM"/>
+      <xs:enumeration value="DQ"/>
+      <xs:enumeration value="DR"/>
+      <xs:enumeration value="EA"/>
+      <xs:enumeration value="EB"/>
+      <xs:enumeration value="ED"/>
+      <xs:enumeration value="EE"/>
+      <xs:enumeration value="EEP"/>
+      <xs:enumeration value="EI"/>
+      <xs:enumeration value="EN"/>
+      <xs:enumeration value="EQ"/>
+      <xs:enumeration value="ER"/>
+      <xs:enumeration value="ERN"/>
+      <xs:enumeration value="ET"/>
+      <xs:enumeration value="EX"/>
+      <xs:enumeration value="FC"/>
+      <xs:enumeration value="FF"/>
+      <xs:enumeration value="FI"/>
+      <xs:enumeration value="FLW"/>
+      <xs:enumeration value="FN"/>
+      <xs:enumeration value="FO"/>
+      <xs:enumeration value="FS"/>
+      <xs:enumeration value="FT"/>
+      <xs:enumeration value="FV"/>
+      <xs:enumeration value="FX"/>
+      <xs:enumeration value="GA"/>
+      <xs:enumeration value="GC"/>
+      <xs:enumeration value="GD"/>
+      <xs:enumeration value="GDN"/>
+      <xs:enumeration value="GN"/>
+      <xs:enumeration value="HS"/>
+      <xs:enumeration value="HWB"/>
+      <xs:enumeration value="IA"/>
+      <xs:enumeration value="IB"/>
+      <xs:enumeration value="ICA"/>
+      <xs:enumeration value="ICE"/>
+      <xs:enumeration value="ICO"/>
+      <xs:enumeration value="II"/>
+      <xs:enumeration value="IL"/>
+      <xs:enumeration value="INB"/>
+      <xs:enumeration value="INN"/>
+      <xs:enumeration value="INO"/>
+      <xs:enumeration value="IP"/>
+      <xs:enumeration value="IS"/>
+      <xs:enumeration value="IT"/>
+      <xs:enumeration value="IV"/>
+      <xs:enumeration value="JB"/>
+      <xs:enumeration value="JE"/>
+      <xs:enumeration value="LA"/>
+      <xs:enumeration value="LAN"/>
+      <xs:enumeration value="LAR"/>
+      <xs:enumeration value="LB"/>
+      <xs:enumeration value="LC"/>
+      <xs:enumeration value="LI"/>
+      <xs:enumeration value="LO"/>
+      <xs:enumeration value="LRC"/>
+      <xs:enumeration value="LS"/>
+      <xs:enumeration value="MA"/>
+      <xs:enumeration value="MB"/>
+      <xs:enumeration value="MF"/>
+      <xs:enumeration value="MG"/>
+      <xs:enumeration value="MH"/>
+      <xs:enumeration value="MR"/>
+      <xs:enumeration value="MRN"/>
+      <xs:enumeration value="MS"/>
+      <xs:enumeration value="MSS"/>
+      <xs:enumeration value="MWB"/>
+      <xs:enumeration value="NA"/>
+      <xs:enumeration value="NF"/>
+      <xs:enumeration value="OH"/>
+      <xs:enumeration value="OI"/>
+      <xs:enumeration value="ON"/>
+      <xs:enumeration value="OP"/>
+      <xs:enumeration value="OR"/>
+      <xs:enumeration value="PB"/>
+      <xs:enumeration value="PC"/>
+      <xs:enumeration value="PD"/>
+      <xs:enumeration value="PE"/>
+      <xs:enumeration value="PF"/>
+      <xs:enumeration value="PI"/>
+      <xs:enumeration value="PK"/>
+      <xs:enumeration value="PL"/>
+      <xs:enumeration value="POR"/>
+      <xs:enumeration value="PP"/>
+      <xs:enumeration value="PQ"/>
+      <xs:enumeration value="PR"/>
+      <xs:enumeration value="PS"/>
+      <xs:enumeration value="PW"/>
+      <xs:enumeration value="PY"/>
+      <xs:enumeration value="RA"/>
+      <xs:enumeration value="RC"/>
+      <xs:enumeration value="RCN"/>
+      <xs:enumeration value="RE"/>
+      <xs:enumeration value="REN"/>
+      <xs:enumeration value="RF"/>
+      <xs:enumeration value="RR"/>
+      <xs:enumeration value="RT"/>
+      <xs:enumeration value="SA"/>
+      <xs:enumeration value="SB"/>
+      <xs:enumeration value="SD"/>
+      <xs:enumeration value="SE"/>
+      <xs:enumeration value="SEA"/>
+      <xs:enumeration value="SF"/>
+      <xs:enumeration value="SH"/>
+      <xs:enumeration value="SI"/>
+      <xs:enumeration value="SM"/>
+      <xs:enumeration value="SN"/>
+      <xs:enumeration value="SP"/>
+      <xs:enumeration value="SQ"/>
+      <xs:enumeration value="SRN"/>
+      <xs:enumeration value="SS"/>
+      <xs:enumeration value="STA"/>
+      <xs:enumeration value="SW"/>
+      <xs:enumeration value="SZ"/>
+      <xs:enumeration value="TB"/>
+      <xs:enumeration value="TCR"/>
+      <xs:enumeration value="TE"/>
+      <xs:enumeration value="TF"/>
+      <xs:enumeration value="TI"/>
+      <xs:enumeration value="TIN"/>
+      <xs:enumeration value="TL"/>
+      <xs:enumeration value="TN"/>
+      <xs:enumeration value="TP"/>
+      <xs:enumeration value="UAR"/>
+      <xs:enumeration value="UC"/>
+      <xs:enumeration value="UCN"/>
+      <xs:enumeration value="UN"/>
+      <xs:enumeration value="UO"/>
+      <xs:enumeration value="URI"/>
+      <xs:enumeration value="VA"/>
+      <xs:enumeration value="VC"/>
+      <xs:enumeration value="VGR"/>
+      <xs:enumeration value="VM"/>
+      <xs:enumeration value="VN"/>
+      <xs:enumeration value="VON"/>
+      <xs:enumeration value="VOR"/>
+      <xs:enumeration value="VP"/>
+      <xs:enumeration value="VR"/>
+      <xs:enumeration value="VS"/>
+      <xs:enumeration value="VT"/>
+      <xs:enumeration value="VV"/>
+      <xs:enumeration value="WE"/>
+      <xs:enumeration value="WM"/>
+      <xs:enumeration value="WN"/>
+      <xs:enumeration value="WR"/>
+      <xs:enumeration value="WS"/>
+      <xs:enumeration value="WY"/>
+      <xs:enumeration value="XA"/>
+      <xs:enumeration value="XC"/>
+      <xs:enumeration value="XP"/>
+      <xs:enumeration value="ZZZ"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="ReferenceCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:ReferenceCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="SealConditionCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="5"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SealConditionCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:SealConditionCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="SealingPartyRoleCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AA"/>
+      <xs:enumeration value="AB"/>
+      <xs:enumeration value="AC"/>
+      <xs:enumeration value="CA"/>
+      <xs:enumeration value="CU"/>
+      <xs:enumeration value="SH"/>
+      <xs:enumeration value="TO"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="SealingPartyRoleCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:SealingPartyRoleCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="SubjectCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_9"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="SubjectCodeType_2">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_11"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="SubjectCodeType_3">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_13"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="SubjectCodeType_4">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_15"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="TemperatureUnitMeasureType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:TemperatureUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI266</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="TemperatureUnitMeasureUnitCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="CEL"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="004"/>
+      <xs:enumeration value="009"/>
+      <xs:enumeration value="010"/>
+      <xs:enumeration value="019"/>
+      <xs:enumeration value="021"/>
+      <xs:enumeration value="025"/>
+      <xs:enumeration value="029"/>
+      <xs:enumeration value="030"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_10">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="T10"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_11">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="S12"/>
+      <xs:enumeration value="S13"/>
+      <xs:enumeration value="S16"/>
+      <xs:enumeration value="S19"/>
+      <xs:enumeration value="S9"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_12">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="T3"/>
+      <xs:enumeration value="T4"/>
+      <xs:enumeration value="T5"/>
+      <xs:enumeration value="T6"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_13">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="S10"/>
+      <xs:enumeration value="S11"/>
+      <xs:enumeration value="S12"/>
+      <xs:enumeration value="S13"/>
+      <xs:enumeration value="S9"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_14">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="T5"/>
+      <xs:enumeration value="T6"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_15">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="S14"/>
+      <xs:enumeration value="S15"/>
+      <xs:enumeration value="S16"/>
+      <xs:enumeration value="S17"/>
+      <xs:enumeration value="S18"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_16">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="T1"/>
+      <xs:enumeration value="T11"/>
+      <xs:enumeration value="T2"/>
+      <xs:enumeration value="T9"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_2">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="C"/>
+      <xs:enumeration value="E"/>
+      <xs:enumeration value="P"/>
+      <xs:enumeration value="T"/>
+      <xs:enumeration value="U"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_3">
+    <xs:restriction base="xs:token">
+      <xs:length value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_4">
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_5">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="85"/>
+      <xs:enumeration value="610"/>
+      <xs:enumeration value="700"/>
+      <xs:enumeration value="703"/>
+      <xs:enumeration value="704"/>
+      <xs:enumeration value="730"/>
+      <xs:enumeration value="740"/>
+      <xs:enumeration value="741"/>
+      <xs:enumeration value="970"/>
+      <xs:enumeration value="xx2"/>
+      <xs:enumeration value="xx3"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_6">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="87"/>
+      <xs:enumeration value="333"/>
+      <xs:enumeration value="380"/>
+      <xs:enumeration value="398"/>
+      <xs:enumeration value="E01"/>
+      <xs:enumeration value="E02"/>
+      <xs:enumeration value="E03"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_7">
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="6"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_8">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="4"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_9">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="S1"/>
+      <xs:enumeration value="S2"/>
+      <xs:enumeration value="S3"/>
+      <xs:enumeration value="S4"/>
+      <xs:enumeration value="S5"/>
+      <xs:enumeration value="S6"/>
+      <xs:enumeration value="S7"/>
+      <xs:enumeration value="S8"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TransportEquipmentCategoryCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AE"/>
+      <xs:enumeration value="BR"/>
+      <xs:enumeration value="BX"/>
+      <xs:enumeration value="DPL"/>
+      <xs:enumeration value="RF"/>
+      <xs:enumeration value="RR"/>
+      <xs:enumeration value="SM"/>
+      <xs:enumeration value="T1"/>
+      <xs:enumeration value="T10"/>
+      <xs:enumeration value="T14"/>
+      <xs:enumeration value="T5"/>
+      <xs:enumeration value="T9"/>
+      <xs:enumeration value="TE"/>
+      <xs:enumeration value="TN"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TransportEquipmentCategoryCodeContentType_2">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AM"/>
+      <xs:enumeration value="BPO"/>
+      <xs:enumeration value="BPP"/>
+      <xs:enumeration value="BPQ"/>
+      <xs:enumeration value="BPR"/>
+      <xs:enumeration value="BPX"/>
+      <xs:enumeration value="CN"/>
+      <xs:enumeration value="SW"/>
+      <xs:enumeration value="T11"/>
+      <xs:enumeration value="T12"/>
+      <xs:enumeration value="T13"/>
+      <xs:enumeration value="T2"/>
+      <xs:enumeration value="T3"/>
+      <xs:enumeration value="T4"/>
+      <xs:enumeration value="T6"/>
+      <xs:enumeration value="T7"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TransportEquipmentCategoryCodeContentType_3">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AE"/>
+      <xs:enumeration value="AM"/>
+      <xs:enumeration value="BPO"/>
+      <xs:enumeration value="BPP"/>
+      <xs:enumeration value="BPQ"/>
+      <xs:enumeration value="BPR"/>
+      <xs:enumeration value="BPX"/>
+      <xs:enumeration value="BR"/>
+      <xs:enumeration value="BX"/>
+      <xs:enumeration value="CN"/>
+      <xs:enumeration value="CT"/>
+      <xs:enumeration value="DPL"/>
+      <xs:enumeration value="DV"/>
+      <xs:enumeration value="GT"/>
+      <xs:enumeration value="NT"/>
+      <xs:enumeration value="RF"/>
+      <xs:enumeration value="RR"/>
+      <xs:enumeration value="SM"/>
+      <xs:enumeration value="SW"/>
+      <xs:enumeration value="T1"/>
+      <xs:enumeration value="T10"/>
+      <xs:enumeration value="T11"/>
+      <xs:enumeration value="T12"/>
+      <xs:enumeration value="T13"/>
+      <xs:enumeration value="T14"/>
+      <xs:enumeration value="T2"/>
+      <xs:enumeration value="T3"/>
+      <xs:enumeration value="T4"/>
+      <xs:enumeration value="T5"/>
+      <xs:enumeration value="T6"/>
+      <xs:enumeration value="T7"/>
+      <xs:enumeration value="T9"/>
+      <xs:enumeration value="TE"/>
+      <xs:enumeration value="TN"/>
+      <xs:enumeration value="TR"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TransportEquipmentCategoryCodeListAgencyIDContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="6"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TransportEquipmentCategoryCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:TransportEquipmentCategoryCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="TransportEquipmentCategoryCodeType_2">
+    <xs:simpleContent>
+      <xs:extension base="qdt:TransportEquipmentCategoryCodeContentType_2"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="TransportEquipmentCategoryCodeType_3">
+    <xs:simpleContent>
+      <xs:extension base="qdt:TransportEquipmentCategoryCodeContentType_3">
+        <xs:attribute name="listAgencyID" type="qdt:TransportEquipmentCategoryCodeListAgencyIDContentType" fixed="6" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1430</eFTI_ID>
+              <eFTI_CL>CL-029</eFTI_CL>
+              <eFTI_DEF>The code of an agency that maintains one or more code lists.</eFTI_DEF>
+              <eFTI_BN>Code list agency code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="TransportEquipmentFullnessCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="T14"/>
+      <xs:enumeration value="T15"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TransportEquipmentFullnessCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:TransportEquipmentFullnessCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="TransportMeansTypeCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1501"/>
+      <xs:enumeration value="1502"/>
+      <xs:enumeration value="1503"/>
+      <xs:enumeration value="1504"/>
+      <xs:enumeration value="1505"/>
+      <xs:enumeration value="1506"/>
+      <xs:enumeration value="1511"/>
+      <xs:enumeration value="1512"/>
+      <xs:enumeration value="1513"/>
+      <xs:enumeration value="1514"/>
+      <xs:enumeration value="1515"/>
+      <xs:enumeration value="1516"/>
+      <xs:enumeration value="1517"/>
+      <xs:enumeration value="1518"/>
+      <xs:enumeration value="1519"/>
+      <xs:enumeration value="1521"/>
+      <xs:enumeration value="1522"/>
+      <xs:enumeration value="1523"/>
+      <xs:enumeration value="1524"/>
+      <xs:enumeration value="1525"/>
+      <xs:enumeration value="1531"/>
+      <xs:enumeration value="1532"/>
+      <xs:enumeration value="1533"/>
+      <xs:enumeration value="1534"/>
+      <xs:enumeration value="1541"/>
+      <xs:enumeration value="1542"/>
+      <xs:enumeration value="1543"/>
+      <xs:enumeration value="1551"/>
+      <xs:enumeration value="1552"/>
+      <xs:enumeration value="1553"/>
+      <xs:enumeration value="1591"/>
+      <xs:enumeration value="1592"/>
+      <xs:enumeration value="1593"/>
+      <xs:enumeration value="1594"/>
+      <xs:enumeration value="1601"/>
+      <xs:enumeration value="1602"/>
+      <xs:enumeration value="1603"/>
+      <xs:enumeration value="1604"/>
+      <xs:enumeration value="1605"/>
+      <xs:enumeration value="1606"/>
+      <xs:enumeration value="1607"/>
+      <xs:enumeration value="1711"/>
+      <xs:enumeration value="1712"/>
+      <xs:enumeration value="1721"/>
+      <xs:enumeration value="1723"/>
+      <xs:enumeration value="1724"/>
+      <xs:enumeration value="1725"/>
+      <xs:enumeration value="1726"/>
+      <xs:enumeration value="1727"/>
+      <xs:enumeration value="1728"/>
+      <xs:enumeration value="1729"/>
+      <xs:enumeration value="1751"/>
+      <xs:enumeration value="1752"/>
+      <xs:enumeration value="1753"/>
+      <xs:enumeration value="1761"/>
+      <xs:enumeration value="1762"/>
+      <xs:enumeration value="1763"/>
+      <xs:enumeration value="1764"/>
+      <xs:enumeration value="1765"/>
+      <xs:enumeration value="1766"/>
+      <xs:enumeration value="1781"/>
+      <xs:enumeration value="1782"/>
+      <xs:enumeration value="2201"/>
+      <xs:enumeration value="2202"/>
+      <xs:enumeration value="2203"/>
+      <xs:enumeration value="2301"/>
+      <xs:enumeration value="2302"/>
+      <xs:enumeration value="2303"/>
+      <xs:enumeration value="2304"/>
+      <xs:enumeration value="2305"/>
+      <xs:enumeration value="3100"/>
+      <xs:enumeration value="3101"/>
+      <xs:enumeration value="3102"/>
+      <xs:enumeration value="3103"/>
+      <xs:enumeration value="3104"/>
+      <xs:enumeration value="3105"/>
+      <xs:enumeration value="3106"/>
+      <xs:enumeration value="3107"/>
+      <xs:enumeration value="3108"/>
+      <xs:enumeration value="3109"/>
+      <xs:enumeration value="3110"/>
+      <xs:enumeration value="3111"/>
+      <xs:enumeration value="3112"/>
+      <xs:enumeration value="3113"/>
+      <xs:enumeration value="3114"/>
+      <xs:enumeration value="3115"/>
+      <xs:enumeration value="3116"/>
+      <xs:enumeration value="3117"/>
+      <xs:enumeration value="3118"/>
+      <xs:enumeration value="3119"/>
+      <xs:enumeration value="3120"/>
+      <xs:enumeration value="3121"/>
+      <xs:enumeration value="3122"/>
+      <xs:enumeration value="3123"/>
+      <xs:enumeration value="3124"/>
+      <xs:enumeration value="3125"/>
+      <xs:enumeration value="3126"/>
+      <xs:enumeration value="3127"/>
+      <xs:enumeration value="3128"/>
+      <xs:enumeration value="3129"/>
+      <xs:enumeration value="3130"/>
+      <xs:enumeration value="3131"/>
+      <xs:enumeration value="3132"/>
+      <xs:enumeration value="3133"/>
+      <xs:enumeration value="3134"/>
+      <xs:enumeration value="3135"/>
+      <xs:enumeration value="3136"/>
+      <xs:enumeration value="3137"/>
+      <xs:enumeration value="3138"/>
+      <xs:enumeration value="3201"/>
+      <xs:enumeration value="3301"/>
+      <xs:enumeration value="3302"/>
+      <xs:enumeration value="3303"/>
+      <xs:enumeration value="3304"/>
+      <xs:enumeration value="4000"/>
+      <xs:enumeration value="5000"/>
+      <xs:enumeration value="8021"/>
+      <xs:enumeration value="8022"/>
+      <xs:enumeration value="8023"/>
+      <xs:enumeration value="8161"/>
+      <xs:enumeration value="8162"/>
+      <xs:enumeration value="8163"/>
+      <xs:enumeration value="8441"/>
+      <xs:enumeration value="8442"/>
+      <xs:enumeration value="8443"/>
+      <xs:enumeration value="8444"/>
+      <xs:enumeration value="8445"/>
+      <xs:enumeration value="8446"/>
+      <xs:enumeration value="8447"/>
+      <xs:enumeration value="8448"/>
+      <xs:enumeration value="8451"/>
+      <xs:enumeration value="8452"/>
+      <xs:enumeration value="8453"/>
+      <xs:enumeration value="8454"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TransportMeansTypeCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:TransportMeansTypeCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="TransportModeCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="8"/>
+      <xs:length value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TransportModeCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:TransportModeCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="TransportServiceConditionCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="5"/>
+      <xs:enumeration value="6"/>
+      <xs:enumeration value="7"/>
+      <xs:enumeration value="8"/>
+      <xs:enumeration value="9"/>
+      <xs:enumeration value="10"/>
+      <xs:enumeration value="11"/>
+      <xs:enumeration value="12"/>
+      <xs:enumeration value="13"/>
+      <xs:enumeration value="14"/>
+      <xs:enumeration value="15"/>
+      <xs:enumeration value="16"/>
+      <xs:enumeration value="17"/>
+      <xs:enumeration value="18"/>
+      <xs:enumeration value="19"/>
+      <xs:enumeration value="20"/>
+      <xs:enumeration value="21"/>
+      <xs:enumeration value="22"/>
+      <xs:enumeration value="23"/>
+      <xs:enumeration value="24"/>
+      <xs:enumeration value="25"/>
+      <xs:enumeration value="26"/>
+      <xs:enumeration value="27"/>
+      <xs:enumeration value="28"/>
+      <xs:enumeration value="29"/>
+      <xs:enumeration value="30"/>
+      <xs:enumeration value="31"/>
+      <xs:enumeration value="32"/>
+      <xs:enumeration value="34"/>
+      <xs:enumeration value="35"/>
+      <xs:enumeration value="36"/>
+      <xs:enumeration value="37"/>
+      <xs:enumeration value="38"/>
+      <xs:enumeration value="39"/>
+      <xs:enumeration value="40"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TransportServiceConditionCodeListAgencyIDContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="6"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TransportServiceConditionCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:TransportServiceConditionCodeContentType">
+        <xs:attribute name="listAgencyID" type="qdt:TransportServiceConditionCodeListAgencyIDContentType" fixed="6" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI942</eFTI_ID>
+              <eFTI_CL>CL-029</eFTI_CL>
+              <eFTI_DEF>The code of an agency that maintains one or more code lists.</eFTI_DEF>
+              <eFTI_BN>Code list agency code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="TransportServicePaymentArrangementCodeListAgencyIDContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="6"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TransportServicePaymentArrangementCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_4">
+        <xs:attribute name="listAgencyID" type="qdt:TransportServicePaymentArrangementCodeListAgencyIDContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1308</eFTI_ID>
+              <eFTI_CL>CL-029</eFTI_CL>
+              <eFTI_DEF>The code of an agency that maintains one or more code lists.</eFTI_DEF>
+              <eFTI_BN>Code list agency code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="TransportServicePaymentArrangementCodeType_2">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_4">
+        <xs:attribute name="listAgencyID" type="qdt:TransportServicePaymentArrangementCodeListAgencyIDContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI946</eFTI_ID>
+              <eFTI_CL>CL-029</eFTI_CL>
+              <eFTI_DEF>The code of an agency that maintains one or more code lists.</eFTI_DEF>
+              <eFTI_BN>Code list agency code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="UnitMeasureType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="udt:MeasureTypeUnitCodeContentType_2" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI264</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="UnitMeasureType_2">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="udt:MeasureTypeUnitCodeContentType_2" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI293</eFTI_ID>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="UnitMeasureType_3">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="udt:MeasureTypeUnitCodeContentType_5" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI341</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="UnitMeasureType_4">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="udt:MeasureTypeUnitCodeContentType_7" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI791</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="VolumeUnitMeasureType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:VolumeUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI46</eFTI_ID>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="VolumeUnitMeasureType_2">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:VolumeUnitMeasureUnitCodeContentType_2" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI229</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="VolumeUnitMeasureType_3">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:VolumeUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI244</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="VolumeUnitMeasureType_4">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:VolumeUnitMeasureUnitCodeContentType_2" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI337</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="VolumeUnitMeasureType_5">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:VolumeUnitMeasureUnitCodeContentType_2" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1204</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="VolumeUnitMeasureType_6">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:VolumeUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI993</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="VolumeUnitMeasureType_7">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:VolumeUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI995</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="VolumeUnitMeasureType_8">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:VolumeUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1007</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="VolumeUnitMeasureType_9">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:VolumeUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1009</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="VolumeUnitMeasureUnitCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="LTR"/>
+      <xs:enumeration value="MTQ"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="VolumeUnitMeasureUnitCodeContentType_2">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="MTQ"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="WeightUnitMeasureType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI42</eFTI_ID>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WeightUnitMeasureType_10">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1003</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WeightUnitMeasureType_11">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1005</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WeightUnitMeasureType_12">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI747</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WeightUnitMeasureType_13">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal_3">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1497</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WeightUnitMeasureType_2">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI44</eFTI_ID>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WeightUnitMeasureType_3">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType_2" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI239</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WeightUnitMeasureType_4">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType_2" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI248</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WeightUnitMeasureType_5">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType_3" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI250</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WeightUnitMeasureType_6">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType_3" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_ID>eFTI339</eFTI_ID>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WeightUnitMeasureType_7">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI989</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WeightUnitMeasureType_8">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI991</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="WeightUnitMeasureType_9">
+    <xs:simpleContent>
+      <xs:extension base="qdt:decimal">
+        <xs:attribute name="unitCode" type="qdt:WeightUnitMeasureUnitCodeContentType" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1208</eFTI_ID>
+              <eFTI_CL>CL-031</eFTI_CL>
+              <eFTI_DEF>A code specifying a unit of measure.</eFTI_DEF>
+              <eFTI_BN>Measurement unit code</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="WeightUnitMeasureUnitCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="GRM"/>
+      <xs:enumeration value="KGM"/>
+      <xs:enumeration value="TNE"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WeightUnitMeasureUnitCodeContentType_2">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="GRM"/>
+      <xs:enumeration value="KGM"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="WeightUnitMeasureUnitCodeContentType_3">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="KGM"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

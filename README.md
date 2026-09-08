@@ -41,10 +41,9 @@ After submitting your request, you will receive credentials for a user account w
 - [For Authorities](#for-authorities)
 
 ## For Gates
-Since gates only communicate with each other through **eDelivery**, you must support the following eFTI messages via **eDelivery**:
-- [*identifierQuery*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/identifier-query.xml) and [*identifierResponse*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/identifier-response.xml)
-- [*uilQuery*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-query.xml) and [*uilResponse*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-response.xml)
-- [*postFollowUpRequest*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/follow-up-request.xml)
+Since gates only communicate with each other through **eDelivery**, you must support all 8 of the message types:
+- [FTI004 FTI004UploadIdentifierRequest](https://github.com/digilogistika/efti-testbed/blob/main/img/pikker_logo_black.png)
+
 
 The **Gate's** eDelivery endpoint is: `https://eu-ee32.eftisandbox.eu/services/msh`.
 

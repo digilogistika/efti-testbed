@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This schema file corresponds to the eFTI Delegated Act (EU) 2024/2024 (known as V1.0)-->
+<xs:schema xmlns:udt="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    targetNamespace="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34"
+    elementFormDefault="qualified"
+    version="beta">
+  <xs:simpleType name="DateTimeDateTimeStringContentType">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="20"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="DateTimeType">
+    <xs:choice>
+      <xs:element name="DateTimeString">
+        <xs:complexType>
+          <xs:simpleContent>
+            <xs:extension base="udt:DateTimeDateTimeStringContentType">
+              <xs:attribute name="format" type="udt:string" use="required">
+                <xs:annotation>
+                  <xs:documentation>
+                    <eFTI_CL>CL-020</eFTI_CL>
+                    <eFTI_ID>eFTI5</eFTI_ID>
+                    <eFTI_DEF>The format of the date/time content.</eFTI_DEF>
+                    <eFTI_BN>Date time format code</eFTI_BN>
+                  </xs:documentation>
+                </xs:annotation>
+              </xs:attribute>
+            </xs:extension>
+          </xs:simpleContent>
+        </xs:complexType>
+      </xs:element>
+    </xs:choice>
+  </xs:complexType>
+  <xs:complexType name="IDType">
+    <xs:simpleContent>
+      <xs:extension base="udt:token"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="IDType_2">
+    <xs:simpleContent>
+      <xs:extension base="udt:token_2"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="IDType_3">
+    <xs:simpleContent>
+      <xs:extension base="udt:token">
+        <xs:attribute name="schemeID" type="udt:token_2" fixed="RFC 9562-4" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1903</eFTI_ID>
+              <eFTI_DEF>The identification of the identification scheme.</eFTI_DEF>
+              <eFTI_BN>Identification Scheme Identifier</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="IDType_4">
+    <xs:simpleContent>
+      <xs:extension base="udt:token">
+        <xs:attribute name="schemeID" type="udt:token_2" fixed="RFC 9562-4" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI1795</eFTI_ID>
+              <eFTI_DEF>The identification of the identification scheme.</eFTI_DEF>
+              <eFTI_BN>Identification Scheme Identifier</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="IDType_5">
+    <xs:simpleContent>
+      <xs:extension base="udt:token_3"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="IDType_6">
+    <xs:simpleContent>
+      <xs:extension base="udt:token">
+        <xs:attribute name="schemeID" type="udt:token_2" fixed="RFC 9562-4" use="required">
+          <xs:annotation>
+            <xs:documentation>
+              <eFTI_ID>eFTI2004</eFTI_ID>
+              <eFTI_DEF>The identification of the identification scheme.</eFTI_DEF>
+              <eFTI_BN>Scheme ID</eFTI_BN>
+            </xs:documentation>
+          </xs:annotation>
+        </xs:attribute>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="string">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="207"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token">
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="36"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_2">
+    <xs:restriction base="xs:token">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="17"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_3">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AT01"/>
+      <xs:enumeration value="AT02"/>
+      <xs:enumeration value="AT03"/>
+      <xs:enumeration value="AT04"/>
+      <xs:enumeration value="AT05"/>
+      <xs:enumeration value="AT06"/>
+      <xs:enumeration value="AT07"/>
+      <xs:enumeration value="AT08"/>
+      <xs:enumeration value="AT09"/>
+      <xs:enumeration value="AT11"/>
+      <xs:enumeration value="AT12"/>
+      <xs:enumeration value="AT13"/>
+      <xs:enumeration value="AT14"/>
+      <xs:enumeration value="AT15"/>
+      <xs:enumeration value="AT16"/>
+      <xs:enumeration value="BE01"/>
+      <xs:enumeration value="BE02"/>
+      <xs:enumeration value="BE03a"/>
+      <xs:enumeration value="BE03b"/>
+      <xs:enumeration value="BE04"/>
+      <xs:enumeration value="BE05"/>
+      <xs:enumeration value="BE06"/>
+      <xs:enumeration value="BE07"/>
+      <xs:enumeration value="BE08"/>
+      <xs:enumeration value="BE09"/>
+      <xs:enumeration value="BE10"/>
+      <xs:enumeration value="BG01"/>
+      <xs:enumeration value="BG02"/>
+      <xs:enumeration value="BG03"/>
+      <xs:enumeration value="BG04"/>
+      <xs:enumeration value="BG05"/>
+      <xs:enumeration value="BG06"/>
+      <xs:enumeration value="BG07"/>
+      <xs:enumeration value="BG08"/>
+      <xs:enumeration value="BG09"/>
+      <xs:enumeration value="BG10a"/>
+      <xs:enumeration value="BG10b"/>
+      <xs:enumeration value="CY01"/>
+      <xs:enumeration value="CY02"/>
+      <xs:enumeration value="CY03"/>
+      <xs:enumeration value="CZ01"/>
+      <xs:enumeration value="CZ02"/>
+      <xs:enumeration value="CZ03"/>
+      <xs:enumeration value="CZ04"/>
+      <xs:enumeration value="CZ05"/>
+      <xs:enumeration value="DE01"/>
+      <xs:enumeration value="DE02"/>
+      <xs:enumeration value="DE03a"/>
+      <xs:enumeration value="DE03b"/>
+      <xs:enumeration value="DE03c"/>
+      <xs:enumeration value="DE04"/>
+      <xs:enumeration value="DK01"/>
+      <xs:enumeration value="DK02"/>
+      <xs:enumeration value="DK03"/>
+      <xs:enumeration value="DK04"/>
+      <xs:enumeration value="DK05"/>
+      <xs:enumeration value="DK06"/>
+      <xs:enumeration value="EE01"/>
+      <xs:enumeration value="EE02"/>
+      <xs:enumeration value="EE04"/>
+      <xs:enumeration value="EE05a"/>
+      <xs:enumeration value="EE05b"/>
+      <xs:enumeration value="EE05c"/>
+      <xs:enumeration value="EE05d"/>
+      <xs:enumeration value="EL01"/>
+      <xs:enumeration value="EL02"/>
+      <xs:enumeration value="EL03"/>
+      <xs:enumeration value="EL04"/>
+      <xs:enumeration value="EL05"/>
+      <xs:enumeration value="EL07"/>
+      <xs:enumeration value="EL08"/>
+      <xs:enumeration value="ES01"/>
+      <xs:enumeration value="ES02"/>
+      <xs:enumeration value="ES03"/>
+      <xs:enumeration value="ES04"/>
+      <xs:enumeration value="ES05"/>
+      <xs:enumeration value="EU01"/>
+      <xs:enumeration value="EU02"/>
+      <xs:enumeration value="EU03"/>
+      <xs:enumeration value="EU05a"/>
+      <xs:enumeration value="EU05b"/>
+      <xs:enumeration value="EU05c"/>
+      <xs:enumeration value="EU06"/>
+      <xs:enumeration value="FI01"/>
+      <xs:enumeration value="FI02"/>
+      <xs:enumeration value="FI03a"/>
+      <xs:enumeration value="FI03b"/>
+      <xs:enumeration value="FR01a"/>
+      <xs:enumeration value="FR01b"/>
+      <xs:enumeration value="FR02a"/>
+      <xs:enumeration value="FR02b"/>
+      <xs:enumeration value="FR02c"/>
+      <xs:enumeration value="FR03"/>
+      <xs:enumeration value="FR04"/>
+      <xs:enumeration value="FR05"/>
+      <xs:enumeration value="HR01"/>
+      <xs:enumeration value="HR03"/>
+      <xs:enumeration value="HR04"/>
+      <xs:enumeration value="HR05a"/>
+      <xs:enumeration value="HR05b"/>
+      <xs:enumeration value="HR05c"/>
+      <xs:enumeration value="HU01"/>
+      <xs:enumeration value="HU02"/>
+      <xs:enumeration value="HU03"/>
+      <xs:enumeration value="HU04"/>
+      <xs:enumeration value="HU05"/>
+      <xs:enumeration value="HU06"/>
+      <xs:enumeration value="HU07"/>
+      <xs:enumeration value="IE01"/>
+      <xs:enumeration value="IE02"/>
+      <xs:enumeration value="IE03"/>
+      <xs:enumeration value="IE05"/>
+      <xs:enumeration value="IE06"/>
+      <xs:enumeration value="IE07"/>
+      <xs:enumeration value="IT01"/>
+      <xs:enumeration value="IT02"/>
+      <xs:enumeration value="IT03a"/>
+      <xs:enumeration value="IT03b"/>
+      <xs:enumeration value="IT03c"/>
+      <xs:enumeration value="LT01"/>
+      <xs:enumeration value="LT02"/>
+      <xs:enumeration value="LT03a"/>
+      <xs:enumeration value="LT03b"/>
+      <xs:enumeration value="LT04"/>
+      <xs:enumeration value="LT05"/>
+      <xs:enumeration value="LU01"/>
+      <xs:enumeration value="LU02"/>
+      <xs:enumeration value="LU03"/>
+      <xs:enumeration value="LU04"/>
+      <xs:enumeration value="LU05"/>
+      <xs:enumeration value="LU06"/>
+      <xs:enumeration value="LU07"/>
+      <xs:enumeration value="LV01"/>
+      <xs:enumeration value="LV02"/>
+      <xs:enumeration value="LV03"/>
+      <xs:enumeration value="LV04"/>
+      <xs:enumeration value="LV05"/>
+      <xs:enumeration value="MT01a"/>
+      <xs:enumeration value="MT01b"/>
+      <xs:enumeration value="MT02"/>
+      <xs:enumeration value="NL01"/>
+      <xs:enumeration value="NL02"/>
+      <xs:enumeration value="NL03a"/>
+      <xs:enumeration value="NL03b"/>
+      <xs:enumeration value="NL04"/>
+      <xs:enumeration value="NL05"/>
+      <xs:enumeration value="NL06"/>
+      <xs:enumeration value="PL01a"/>
+      <xs:enumeration value="PL01b"/>
+      <xs:enumeration value="PL01c"/>
+      <xs:enumeration value="PL02"/>
+      <xs:enumeration value="PL03"/>
+      <xs:enumeration value="PL04a"/>
+      <xs:enumeration value="PL04b"/>
+      <xs:enumeration value="PL04c"/>
+      <xs:enumeration value="PL06"/>
+      <xs:enumeration value="PT01"/>
+      <xs:enumeration value="PT02"/>
+      <xs:enumeration value="RO01"/>
+      <xs:enumeration value="RO02a"/>
+      <xs:enumeration value="RO02b"/>
+      <xs:enumeration value="RO03"/>
+      <xs:enumeration value="RO04"/>
+      <xs:enumeration value="RO05a"/>
+      <xs:enumeration value="RO05b"/>
+      <xs:enumeration value="RO05c"/>
+      <xs:enumeration value="RO06"/>
+      <xs:enumeration value="SE01"/>
+      <xs:enumeration value="SE02"/>
+      <xs:enumeration value="SE03"/>
+      <xs:enumeration value="SE04"/>
+      <xs:enumeration value="SE05"/>
+      <xs:enumeration value="SE06"/>
+      <xs:enumeration value="SI01"/>
+      <xs:enumeration value="SI02"/>
+      <xs:enumeration value="SI03"/>
+      <xs:enumeration value="SI05"/>
+      <xs:enumeration value="SI06"/>
+      <xs:enumeration value="SK01"/>
+      <xs:enumeration value="SK02"/>
+      <xs:enumeration value="SK03"/>
+      <xs:enumeration value="SK04"/>
+      <xs:enumeration value="SK05"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+</xs:schema>

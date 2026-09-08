@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:FTI021SearchIdentifierResponse
+  xmlns:rsm="urn:eu:move:eFTI:data:standard:FTI021SearchIdentifierResponse:1"
+  xmlns="urn:eu:move:eFTI:data:standard:ReusableAggregateBusinessInformationEntity:34"
+  xmlns:udt="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34">
+
+  <rsm:ExchangedDocumentContext>
+    <MessageStandardSpecifiedDocumentContextParameter>
+      <ID>eFTI</ID>
+      <SpecifiedDocumentVersion>
+        <ID>1.0</ID>
+      </SpecifiedDocumentVersion>
+    </MessageStandardSpecifiedDocumentContextParameter>
+  </rsm:ExchangedDocumentContext>
+
+  <rsm:ExchangedDocument>
+    <ID schemeID="RFC 9562-4">0f6c30b4-89b5-11f1-a20a-3c9c0f2eb459</ID>
+    <TypeCode>021</TypeCode>
+    <StatusCode>C</StatusCode>
+    <IssueDateTime>
+      <udt:DateTimeString format="207">202109240850+0000</udt:DateTimeString>
+    </IssueDateTime>
+    <RequestedSpecifiedQuery>
+      <ID schemeID="RFC 9562-4">17022113-89b5-11f1-bec0-3c9c0f2eb459</ID>
+    </RequestedSpecifiedQuery>
+  </rsm:ExchangedDocument>
+
+  <rsm:EFTIIDInformation>
+    <UniqueIDSetUniqueIDSet>
+      <GateID>Gate-001</GateID>
+      <PlatformID>Platform-001</PlatformID>
+      <DatasetID schemeID="RFC 9562-4">550e8400-e29b-41d4-a716-446655440000</DatasetID>
+      <ParameterIDSetCriteria>
+        <CarrierAcceptanceDateParameterScope>
+          <SpecifiedDateTime>
+            <udt:DateTimeString format="102">20210924</udt:DateTimeString>
+          </SpecifiedDateTime>
+        </CarrierAcceptanceDateParameterScope>
+        <MainCarriageModeCodeParameterScope>
+          <TransportModeParameterCode>1</TransportModeParameterCode>
+        </MainCarriageModeCodeParameterScope>
+      </ParameterIDSetCriteria>
+    </UniqueIDSetUniqueIDSet>
+  </rsm:EFTIIDInformation>
+
+</rsm:FTI021SearchIdentifierResponse>

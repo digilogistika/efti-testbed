@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This schema file corresponds to the eFTI Delegated Act (EU) 2024/2024 (known as V1.0)-->
+<xs:schema xmlns:ram="urn:eu:move:eFTI:data:standard:ReusableAggregateBusinessInformationEntity:34"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema"
+    xmlns:qdt="urn:eu:move:eFTI:data:standard:QualifiedDataType:34"
+    xmlns:udt="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34"
+    targetNamespace="urn:eu:move:eFTI:data:standard:ReusableAggregateBusinessInformationEntity:34"
+    elementFormDefault="qualified"
+    version="beta">
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:QualifiedDataType:34" schemaLocation="FTI025s_urn_eu_move_eFTI_data_standard_QualifiedDataType_34.xsd"/>
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34" schemaLocation="FTI025s_urn_eu_move_eFTI_data_standard_UnqualifiedDataType_34.xsd"/>
+  <xs:complexType name="DocumentContextParameterType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Document Context Parameter</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType" fixed="eFTI">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2012</eFTI_ID>
+            <eFTI_DEF>The identification of the applicable eFTI Regulation.</eFTI_DEF>
+            <eFTI_BN>ID</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedDocumentVersion" type="ram:DocumentVersionType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2134</eFTI_ID>
+            <eFTI_BN>eFTI Regulation Standard Version</eFTI_BN>
+            <eFTI_DEF>The version of the eFTI Regulation version applicable for this eFTI message.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="DocumentVersionType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Document Version</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType_2" fixed="1.0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2013</eFTI_ID>
+            <eFTI_DEF>The identification of this eFTI Regulation version.</eFTI_DEF>
+            <eFTI_BN>ID</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="EFTIIDInformationType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>eFTI Identifiers</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="UniqueIDSetUniqueIDSet" type="ram:UniqueIDSetType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2137</eFTI_ID>
+            <eFTI_DEF>The UIL and identifiers set.</eFTI_DEF>
+            <eFTI_BN>UILs And Responses</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExchangedDocumentContextType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Exchanged Document Context</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="MessageStandardSpecifiedDocumentContextParameter" type="ram:DocumentContextParameterType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2133</eFTI_ID>
+            <eFTI_DEF>The eFTI Regulation applicable for this eFTI message.</eFTI_DEF>
+            <eFTI_BN>eFTI Applicable Regulation</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ExchangedDocumentType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Exchanged Document</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType_3">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_DEF>The unique identifier of the instance of a message type.</eFTI_DEF>
+            <eFTI_BN>Message instance ID</eFTI_BN>
+            <eFTI_ID>eFTI1</eFTI_ID>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="TypeCode" type="qdt:DocumentCodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_BN>eFTI payload type code</eFTI_BN>
+            <eFTI_CL>CL-057</eFTI_CL>
+            <eFTI_ID>eFTI2</eFTI_ID>
+            <eFTI_DEF> The code identifying the eFTI message type.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IssueDateTime" type="udt:DateTimeType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI4</eFTI_ID>
+            <eFTI_BN>Payload time stamp</eFTI_BN>
+            <eFTI_DEF>The timestamp identifying the moment at which this message instance was sent.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ReferencedID" type="udt:IDType_4" minOccurs="0" maxOccurs="200">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_DEF>The unique ID of the message instance being replied to or referenced.  </eFTI_DEF>
+            <eFTI_ID>eFTI1906</eFTI_ID>
+            <eFTI_BN>Referenced message instance ID</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RequestedSpecifiedQuery" type="ram:SpecifiedQueryType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_BN>End-to-end transaction information</eFTI_BN>
+            <eFTI_ID>ASBIE1866</eFTI_ID>
+            <eFTI_DEF>An end to end transaction identifier for this eFTI message, assigned by the initiator party.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="RequesterTradeParty" type="ram:TradePartyType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE1868</eFTI_ID>
+            <eFTI_BN>Requester</eFTI_BN>
+            <eFTI_DEF>The party that requests this exchanged data set.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="MessageInformationType">
+    <xs:sequence>
+      <xs:element name="FollowUp" type="udt:TextType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2018</eFTI_ID>
+            <eFTI_DEF>Follow up text included in this message information.</eFTI_DEF>
+            <eFTI_BN>Follow Up Text</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="AttachedSpecifiedBinaryFile" type="ram:SpecifiedBinaryFileType" minOccurs="0" maxOccurs="unbounded">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2136</eFTI_ID>
+            <eFTI_DEF>A binary format file attached to this message.</eFTI_DEF>
+            <eFTI_BN>Attached Binary Files</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SpecifiedBinaryFileType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Binary File</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="FileName" type="udt:TextType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2022</eFTI_ID>
+            <eFTI_DEF>The file name, expressed as text, of this specified binary file.</eFTI_DEF>
+            <eFTI_BN>Name</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MIMECode" type="udt:CodeType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_CL>CL-069</eFTI_CL>
+            <eFTI_ID>eFTI2024</eFTI_ID>
+            <eFTI_DEF>The code specifying the Multipurpose Internet Mail Extensions (MIME) type for this attached binary file.</eFTI_DEF>
+            <eFTI_BN>MIME Code</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="IncludedBinaryObject" type="udt:BinaryObjectType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>eFTI2027</eFTI_ID>
+            <eFTI_DEF>The binary object included in this attached file.</eFTI_DEF>
+            <eFTI_BN>Included Binary Object</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="SpecifiedQueryType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Query</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ID" type="udt:IDType_5">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_BN>End-to-end transaction ID</eFTI_BN>
+            <eFTI_ID>eFTI1794</eFTI_ID>
+            <eFTI_DEF> Identifier of the end to end eFTI message exchange operation. </eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TradeAddressType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Trade Address</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="CountryID" type="qdt:CountryIDType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_BN>Country code</eFTI_BN>
+            <eFTI_CL>CL-017</eFTI_CL>
+            <eFTI_ID>eFTI1844</eFTI_ID>
+            <eFTI_DEF>The country code of this requester party address.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="TradePartyType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Trade Party</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="PostalTradeAddress" type="ram:TradeAddressType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE1871</eFTI_ID>
+            <eFTI_DEF>The postal address of the requester party.</eFTI_DEF>
+            <eFTI_BN>Postal Address</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="UniqueIDSetType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>Unique ID Set</eFTI_BN>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="GateID" type="udt:IDType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_DEF>The identifier of an eFTI gate.</eFTI_DEF>
+            <eFTI_ID>eFTI2002</eFTI_ID>
+            <eFTI_BN>Gate ID</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="PlatformID" type="udt:IDType_2">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_DEF>The identifier of an eFTI platform.</eFTI_DEF>
+            <eFTI_ID>eFTI2001</eFTI_ID>
+            <eFTI_BN>Platform ID</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="DatasetID" type="udt:IDType_6">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_DEF>The unique ID of an eFTI CMDS, assigned by an eFTI platform.</eFTI_DEF>
+            <eFTI_ID>eFTI2003</eFTI_ID>
+            <eFTI_BN>Dataset ID</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

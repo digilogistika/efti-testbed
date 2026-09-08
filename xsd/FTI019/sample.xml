@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rsm:FTI019SearchIdentifierRequest
+  xmlns:rsm="urn:eu:move:eFTI:data:standard:FTI019SearchIdentifierRequest:1"
+  xmlns="urn:eu:move:eFTI:data:standard:ReusableAggregateBusinessInformationEntity:34"
+  xmlns:udt="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34">
+
+  <rsm:ExchangedDocumentContext>
+    <MessageStandardSpecifiedDocumentContextParameter>
+      <ID>eFTI</ID>
+      <SpecifiedDocumentVersion>
+        <ID>1.0</ID>
+      </SpecifiedDocumentVersion>
+    </MessageStandardSpecifiedDocumentContextParameter>
+  </rsm:ExchangedDocumentContext>
+
+  <rsm:ExchangedDocument>
+    <ID schemeID="RFC 9562-4">0f6c30b4-89b5-11f1-a20a-3c9c0f2eb459</ID>
+    <TypeCode>019</TypeCode>
+    <IssueDateTime>
+      <udt:DateTimeString format="207">202109240850+0000</udt:DateTimeString>
+    </IssueDateTime>
+    <RequestedSpecifiedQuery>
+      <ID schemeID="RFC 9562-4">17022113-89b5-11f1-bec0-3c9c0f2eb459</ID>
+    </RequestedSpecifiedQuery>
+    <RequesterTradeParty>
+      <PostalTradeAddress>
+        <CountryID>DE</CountryID>
+      </PostalTradeAddress>
+    </RequesterTradeParty>
+  </rsm:ExchangedDocument>
+
+  <rsm:EFTIIDInformation>
+    <ParameterSearchCriteria>
+      <CarrierAcceptanceDateParameterScope>
+        <SubtypeCode>EQ</SubtypeCode>
+        <SpecifiedDateTime>
+          <udt:DateTimeString format="102">20210924</udt:DateTimeString>
+        </SpecifiedDateTime>
+      </CarrierAcceptanceDateParameterScope>
+      <CarrierAcceptanceCountryParameterScope>
+        <SubtypeCode>EQ</SubtypeCode>
+        <CountryID>DE</CountryID>
+      </CarrierAcceptanceCountryParameterScope>
+      <DeliveryDateParameterScope>
+        <SubtypeCode>GT</SubtypeCode>
+        <SpecifiedDateTime>
+          <udt:DateTimeString format="102">20250601</udt:DateTimeString>
+        </SpecifiedDateTime>
+      </DeliveryDateParameterScope>
+      <DeliveryCountryParameterScope>
+        <SubtypeCode>EQ</SubtypeCode>
+        <CountryID>EE</CountryID>
+      </DeliveryCountryParameterScope>
+      <MainCarriageTransportMeansIDParameterScope>
+        <SubtypeCode>EQ</SubtypeCode>
+        <ID>VESSEL-001</ID>
+      </MainCarriageTransportMeansIDParameterScope>
+      <MainCarriageModeCodeParameterScope>
+        <SubtypeCode>EQ</SubtypeCode>
+        <TransportModeParameterCode>1</TransportModeParameterCode>
+      </MainCarriageModeCodeParameterScope>
+      <CarriedTransportEquipmentIDParameterScope>
+        <SubtypeCode>EQ</SubtypeCode>
+        <ID>TE-004</ID>
+      </CarriedTransportEquipmentIDParameterScope>
+    </ParameterSearchCriteria>
+  </rsm:EFTIIDInformation>
+
+</rsm:FTI019SearchIdentifierRequest>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This schema file corresponds to the eFTI Delegated Act (EU) 2024/2024 (known as V1.0)-->
+<xs:schema xmlns:rsm="urn:eu:move:eFTI:data:standard:eFTIXM:1"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:ram="urn:eu:move:eFTI:data:standard:ReusableAggregateBusinessInformationEntity:34"
+           targetNamespace="urn:eu:move:eFTI:data:standard:eFTIXM:1"
+           elementFormDefault="qualified"
+           version="beta">
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:QualifiedDataType:34" schemaLocation="eFTIXMs_urn_eu_move_eFTI_data_standard_QualifiedDataType_34.xsd"/>
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:ReusableAggregateBusinessInformationEntity:34" schemaLocation="eFTIXMs_urn_eu_move_eFTI_data_standard_ReusableAggregateBusinessInformationEntity_34.xsd"/>
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34" schemaLocation="eFTIXMs_urn_eu_move_eFTI_data_standard_UnqualifiedDataType_34.xsd"/>
+  <xs:element name="eFTIXM" type="rsm:eFTIXMType"/>
+  <xs:complexType name="eFTIXMType">
+    <xs:annotation>
+      <xs:documentation>
+        <eFTI_BN>eFTI message content</eFTI_BN>
+        <eFTI_ID>ASBIE1026</eFTI_ID>
+        <eFTI_DEF>eFTI message content.</eFTI_DEF>
+      </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:element name="ExchangedDocumentContext" type="ram:ExchangedDocumentContextType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_BN>eFTI Message Context</eFTI_BN>
+            <eFTI_ID>ASBIE2130</eFTI_ID>
+            <eFTI_DEF>The eFTI Regulation context for this eFTI message.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="ExchangedDocument" type="ram:ExchangedDocumentType">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_BN>eFTI Message Header</eFTI_BN>
+            <eFTI_ID>ASBIE1859</eFTI_ID>
+            <eFTI_DEF>The eFTI data set header information.</eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="MessageInformation" type="ram:MessageInformationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2135</eFTI_ID>
+            <eFTI_DEF>Information pertaining to the operations associated with this message</eFTI_DEF>
+            <eFTI_BN>eFTI Message Information</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="EFTIIDInformation" type="ram:EFTIIDInformationType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_ID>ASBIE2008</eFTI_ID>
+            <eFTI_DEF>eFTI related identifiers and related search parameters.</eFTI_DEF>
+            <eFTI_BN>eFTI Identifiers</eFTI_BN>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+      <xs:element name="SpecifiedSupplyChainConsignment" type="ram:SupplyChainConsignmentType" minOccurs="0">
+        <xs:annotation>
+          <xs:documentation>
+            <eFTI_BN>eFTI data set consignment</eFTI_BN>
+            <eFTI_ID>ASBIE1027</eFTI_ID>
+            <eFTI_DEF>
+The consignment is a separately identifiable
+collection of consignment Items (available to be)
+transported from only one consignor to only one
+consignee via one or more modes of transport. A
+consignment can be at a master level which covers a
+consolidated cargo (could be a single house level
+consignment or more than one) contracted between
+freight forwarder as the consignor and a carrier, or at
+house level which covers the cargo contracted to be
+moved by the freight forwarder on behalf of the
+buyer or the seller. In addition in case of road, it can
+also be at a subcontract level which covers the case
+of a road carrier (aka. haulier) contracted to move the
+goods on behalf of another road carrier.
+            </eFTI_DEF>
+          </xs:documentation>
+        </xs:annotation>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

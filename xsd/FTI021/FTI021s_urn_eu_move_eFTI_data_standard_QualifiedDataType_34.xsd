@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--This schema file corresponds to the eFTI Delegated Act (EU) 2024/2024 (known as V1.0)-->
+<xs:schema xmlns:qdt="urn:eu:move:eFTI:data:standard:QualifiedDataType:34"
+           xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="urn:eu:move:eFTI:data:standard:QualifiedDataType:34"
+           elementFormDefault="qualified"
+           version="beta">
+  <xs:import namespace="urn:eu:move:eFTI:data:standard:UnqualifiedDataType:34" schemaLocation="FTI021s_urn_eu_move_eFTI_data_standard_UnqualifiedDataType_34.xsd"/>
+  <xs:complexType name="CountryIDType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_3"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="DocumentStatusCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:token_2"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="token">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="021"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_2">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="C"/>
+      <xs:enumeration value="E"/>
+      <xs:enumeration value="P"/>
+      <xs:enumeration value="T"/>
+      <xs:enumeration value="U"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="token_3">
+    <xs:restriction base="xs:token">
+      <xs:length value="2"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TransportEquipmentCategoryCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AE"/>
+      <xs:enumeration value="BR"/>
+      <xs:enumeration value="BX"/>
+      <xs:enumeration value="DPL"/>
+      <xs:enumeration value="RF"/>
+      <xs:enumeration value="RR"/>
+      <xs:enumeration value="SM"/>
+      <xs:enumeration value="T1"/>
+      <xs:enumeration value="T10"/>
+      <xs:enumeration value="T14"/>
+      <xs:enumeration value="T5"/>
+      <xs:enumeration value="T9"/>
+      <xs:enumeration value="TE"/>
+      <xs:enumeration value="TN"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:simpleType name="TransportEquipmentCategoryCodeContentType_2">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="AM"/>
+      <xs:enumeration value="BPO"/>
+      <xs:enumeration value="BPP"/>
+      <xs:enumeration value="BPQ"/>
+      <xs:enumeration value="BPR"/>
+      <xs:enumeration value="BPX"/>
+      <xs:enumeration value="CN"/>
+      <xs:enumeration value="SW"/>
+      <xs:enumeration value="T11"/>
+      <xs:enumeration value="T12"/>
+      <xs:enumeration value="T13"/>
+      <xs:enumeration value="T2"/>
+      <xs:enumeration value="T3"/>
+      <xs:enumeration value="T4"/>
+      <xs:enumeration value="T6"/>
+      <xs:enumeration value="T7"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="3"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TransportEquipmentCategoryCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:TransportEquipmentCategoryCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="TransportEquipmentCategoryCodeType_2">
+    <xs:simpleContent>
+      <xs:extension base="qdt:TransportEquipmentCategoryCodeContentType_2"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="TransportMeansTypeCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1501"/>
+      <xs:enumeration value="1502"/>
+      <xs:enumeration value="1503"/>
+      <xs:enumeration value="1504"/>
+      <xs:enumeration value="1505"/>
+      <xs:enumeration value="1506"/>
+      <xs:enumeration value="1511"/>
+      <xs:enumeration value="1512"/>
+      <xs:enumeration value="1513"/>
+      <xs:enumeration value="1514"/>
+      <xs:enumeration value="1515"/>
+      <xs:enumeration value="1516"/>
+      <xs:enumeration value="1517"/>
+      <xs:enumeration value="1518"/>
+      <xs:enumeration value="1519"/>
+      <xs:enumeration value="1521"/>
+      <xs:enumeration value="1522"/>
+      <xs:enumeration value="1523"/>
+      <xs:enumeration value="1524"/>
+      <xs:enumeration value="1525"/>
+      <xs:enumeration value="1531"/>
+      <xs:enumeration value="1532"/>
+      <xs:enumeration value="1533"/>
+      <xs:enumeration value="1534"/>
+      <xs:enumeration value="1541"/>
+      <xs:enumeration value="1542"/>
+      <xs:enumeration value="1543"/>
+      <xs:enumeration value="1551"/>
+      <xs:enumeration value="1552"/>
+      <xs:enumeration value="1553"/>
+      <xs:enumeration value="1591"/>
+      <xs:enumeration value="1592"/>
+      <xs:enumeration value="1593"/>
+      <xs:enumeration value="1594"/>
+      <xs:enumeration value="1601"/>
+      <xs:enumeration value="1602"/>
+      <xs:enumeration value="1603"/>
+      <xs:enumeration value="1604"/>
+      <xs:enumeration value="1605"/>
+      <xs:enumeration value="1606"/>
+      <xs:enumeration value="1607"/>
+      <xs:enumeration value="1711"/>
+      <xs:enumeration value="1712"/>
+      <xs:enumeration value="1721"/>
+      <xs:enumeration value="1723"/>
+      <xs:enumeration value="1724"/>
+      <xs:enumeration value="1725"/>
+      <xs:enumeration value="1726"/>
+      <xs:enumeration value="1727"/>
+      <xs:enumeration value="1728"/>
+      <xs:enumeration value="1729"/>
+      <xs:enumeration value="1751"/>
+      <xs:enumeration value="1752"/>
+      <xs:enumeration value="1753"/>
+      <xs:enumeration value="1761"/>
+      <xs:enumeration value="1762"/>
+      <xs:enumeration value="1763"/>
+      <xs:enumeration value="1764"/>
+      <xs:enumeration value="1765"/>
+      <xs:enumeration value="1766"/>
+      <xs:enumeration value="1781"/>
+      <xs:enumeration value="1782"/>
+      <xs:enumeration value="2201"/>
+      <xs:enumeration value="2202"/>
+      <xs:enumeration value="2203"/>
+      <xs:enumeration value="2301"/>
+      <xs:enumeration value="2302"/>
+      <xs:enumeration value="2303"/>
+      <xs:enumeration value="2304"/>
+      <xs:enumeration value="2305"/>
+      <xs:enumeration value="3100"/>
+      <xs:enumeration value="3101"/>
+      <xs:enumeration value="3102"/>
+      <xs:enumeration value="3103"/>
+      <xs:enumeration value="3104"/>
+      <xs:enumeration value="3105"/>
+      <xs:enumeration value="3106"/>
+      <xs:enumeration value="3107"/>
+      <xs:enumeration value="3108"/>
+      <xs:enumeration value="3109"/>
+      <xs:enumeration value="3110"/>
+      <xs:enumeration value="3111"/>
+      <xs:enumeration value="3112"/>
+      <xs:enumeration value="3113"/>
+      <xs:enumeration value="3114"/>
+      <xs:enumeration value="3115"/>
+      <xs:enumeration value="3116"/>
+      <xs:enumeration value="3117"/>
+      <xs:enumeration value="3118"/>
+      <xs:enumeration value="3119"/>
+      <xs:enumeration value="3120"/>
+      <xs:enumeration value="3121"/>
+      <xs:enumeration value="3122"/>
+      <xs:enumeration value="3123"/>
+      <xs:enumeration value="3124"/>
+      <xs:enumeration value="3125"/>
+      <xs:enumeration value="3126"/>
+      <xs:enumeration value="3127"/>
+      <xs:enumeration value="3128"/>
+      <xs:enumeration value="3129"/>
+      <xs:enumeration value="3130"/>
+      <xs:enumeration value="3131"/>
+      <xs:enumeration value="3132"/>
+      <xs:enumeration value="3133"/>
+      <xs:enumeration value="3134"/>
+      <xs:enumeration value="3135"/>
+      <xs:enumeration value="3136"/>
+      <xs:enumeration value="3137"/>
+      <xs:enumeration value="3138"/>
+      <xs:enumeration value="3201"/>
+      <xs:enumeration value="3301"/>
+      <xs:enumeration value="3302"/>
+      <xs:enumeration value="3303"/>
+      <xs:enumeration value="3304"/>
+      <xs:enumeration value="4000"/>
+      <xs:enumeration value="5000"/>
+      <xs:enumeration value="8021"/>
+      <xs:enumeration value="8022"/>
+      <xs:enumeration value="8023"/>
+      <xs:enumeration value="8161"/>
+      <xs:enumeration value="8162"/>
+      <xs:enumeration value="8163"/>
+      <xs:enumeration value="8441"/>
+      <xs:enumeration value="8442"/>
+      <xs:enumeration value="8443"/>
+      <xs:enumeration value="8444"/>
+      <xs:enumeration value="8445"/>
+      <xs:enumeration value="8446"/>
+      <xs:enumeration value="8447"/>
+      <xs:enumeration value="8448"/>
+      <xs:enumeration value="8451"/>
+      <xs:enumeration value="8452"/>
+      <xs:enumeration value="8453"/>
+      <xs:enumeration value="8454"/>
+      <xs:minLength value="1"/>
+      <xs:maxLength value="4"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TransportMeansTypeCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:TransportMeansTypeCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:simpleType name="TransportModeCodeContentType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="1"/>
+      <xs:enumeration value="2"/>
+      <xs:enumeration value="3"/>
+      <xs:enumeration value="4"/>
+      <xs:enumeration value="8"/>
+      <xs:length value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:complexType name="TransportModeCodeType">
+    <xs:simpleContent>
+      <xs:extension base="qdt:TransportModeCodeContentType"/>
+    </xs:simpleContent>
+  </xs:complexType>
+</xs:schema>
