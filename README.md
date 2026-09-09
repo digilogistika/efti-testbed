@@ -40,10 +40,20 @@ After submitting your request, you will receive credentials for a user account w
   - [eDelivery](#edelivery)
 - [For Authorities](#for-authorities)
 
+> [!IMPORTANT]
+> eFTI4ALL testbed supports 2 schema versions - reference implementation's and FTI beta v1.0. As the FTI beta v1.0 is the
+> latest version published by DG MOVE, we strongly recommend using this schema for integrations. 
+
 ## For Gates
 Since gates only communicate with each other through **eDelivery**, you must support all 8 of the message types:
-- [FTI004 FTI004UploadIdentifierRequest](https://github.com/digilogistika/efti-testbed/blob/main/img/pikker_logo_black.png)
-
+- [FTI004 FTI004UploadIdentifierRequest](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI004/FTI004s.xsd)
+- [FTI009 FTI009GetCmdsRequest](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI009/FTI009s.xsd)
+- [FTI010 FTI010GetCmdsResponse](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI010/FTI010s.xsd)
+- [FTI019 FTI019SearchIdentifierRequest](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI019/FTI019s.xsd)
+- [FTI021 FTI021SearchIdentifierResponse](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI021/FTI021s.xsd)
+- [FTI025 FTI025LodgeFollowUpCommRequest](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI025/FTI025s.xsd)
+- [FTI029 FTI029UploadIdentifierResponse](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI029/FTI029s.xsd)
+- [FTI030 FTI030LodgeFollowUpCommResponse](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI030/FTI030s.xsd)
 
 The **Gate's** eDelivery endpoint is: `https://eu-ee32.eftisandbox.eu/services/msh`.
 
@@ -61,7 +71,7 @@ Example **UIL** to query dataset:
 - **Dataset ID**: 9efaf791-3898-4062-9b9f-4efbc12501d6
 
 ### Automated testing
-Admins can execute automated performance tests against integrated gates using a single identifier. This tool sequentially triggers an identifier query, a dataset query, and a follow-up message, generating a report detailing test case success and execution latency.
+Admins can execute automated tests against integrated gates using a single identifier. This tool sequentially triggers an identifier query, a dataset query, and a follow-up message, generating a report detailing test case success and execution latency.
 
 ## For Platforms
 As a platform you have **two** ways to connect with the **eFTI TestBed**:
@@ -71,18 +81,27 @@ As a platform you have **two** ways to connect with the **eFTI TestBed**:
 You can choose either approach, but we strongly recommend the **REST API** since it is (a lot) faster and easier to implement.
 If needed, you can also use both.
 
-Messages exchanged between the platform and the **Gate** must conform to the  [**eFTI schemas**](https://github.com/EFTI4EU/reference-implementation/tree/main/schema).
+Messages exchanged between the platform and the **Gate** must conform to the  [**eFTI schemas**](https://github.com/digilogistika/efti-testbed/tree/main/xsd).
 
 When a consignment is created on the platform, an **identifiers set** should be sent to the **Gate**.
-The structure of the **identifier set** is defined in [this **XSD**](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/consignment-identifier.xsd).
+The structure of the **identifier set** is defined in [this **XSD**](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI004/FTI004s.xsd).
+To simplify integration there are 2 allowed message types that the gate accepts:
+1. `ParameterIDSetCriteria` (part of `FTI004UploadIdentifierRequest`)
+2. `FTI004UploadIdentifierRequest`
+
+We recommend using the first message type as it is smaller and easier to construct
 
 When an authority queries a consignment through the **Gate**, the platform must respond with the consignment dataset based on the requested **subsets**.
-The dataset structure and subset-dependent fields are defined in [this **XSD**](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/consignment-common.xsd).
+The dataset structure and subset-dependent fields are defined in [this **XSD**](https://github.com/digilogistika/efti-testbed/blob/main/xsd/eFTI%20XM%20SubMap/eFTIXMa.xsd).
+
+> [!NOTE]
+> The FTI beta v1.0 schema does not define field `status` (Mandatory/Conditional/Optional) which is a known limitation of the latest schema. 
 
 **Subsets** can be thought of as access rights that define which data an authority is allowed to request.
 For example, if an authority has subset `EU01`, it can only access the data fields defined for `EU01`.
 
-After integration you are able to configure your platforms, manage their users and view consignments from the **Admin panel**. Furthermore, you can query identifiers and datasets from your platforms from the **Demo Authority UI**.
+After integration you are able to configure your platforms, manage their users and view consignments from the **Admin panel**. 
+Furthermore, you can query identifiers and datasets from your platforms from the **Demo Authority UI**.
 
 ### REST API
 For **REST API** integration, your platform must:
@@ -106,14 +125,14 @@ Authorization: Basic YWJjQGV4YW1wbGUuY29tOjEyMzQ=
 
 ### eDelivery
 For **eDelivery** integration, your platform must implement an eDelivery endpoint capable of handling the following eFTI messages:
-- [*uilQuery*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-query.xml)
-- [*postFollowUpRequest*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/follow-up-request.xml)
+- [FTI004 FTI004UploadIdentifierRequest](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI004/FTI004s.xsd)
+- [FTI009 FTI009GetCmdsRequest](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI009/FTI009s.xsd)
+- [FTI010 FTI010GetCmdsResponse](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI010/FTI010s.xsd)
+- [FTI025 FTI025LodgeFollowUpCommRequest](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI025/FTI025s.xsd)
+- [FTI029 FTI029UploadIdentifierResponse](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI029/FTI029s.xsd)
+- [FTI030 FTI030LodgeFollowUpCommResponse](https://github.com/digilogistika/efti-testbed/blob/main/xsd/FTI030/FTI030s.xsd)
 
-Additionally, the platform must send a [*saveIdentifiersRequest*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/save-identifiers.xml) to the **Gate's** eDelivery endpoint.
-
-Because **eDelivery** is *asynchronous*, the platform must respond to a [*uilQuery*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-query.xml) with a corresponding [*uilResponse*](https://github.com/EFTI4EU/reference-implementation/blob/main/schema/xsd/examples/uil-response.xml).
-
-The **Gate's** eDelivery endpoint is: `https://eu-eeThe following tables outline current member states, software vendors, and platform providers active or onboarding in the eFTI TestBed environment.32.eftisandbox.eu/services/msh`.
+The **Gate's** eDelivery endpoint is: `https://eu-ee32.eftisandbox.eu/services/msh`.
 
 For eDelivery integration, both parties must exchange certificates.
 Make sure your Gate's certificate is configured in the **Admin Panel**.
