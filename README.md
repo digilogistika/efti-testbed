@@ -38,6 +38,34 @@
   body {
     padding-bottom: 4.5rem;
   }
+
+  .efti-onboarding-card {
+    box-sizing: border-box;
+    margin: 1.5rem 0;
+    padding: 1.5rem 1.75rem;
+    background: linear-gradient(135deg, #e8f5ee 0%, #e6effa 100%);
+    border: 1px solid #cfe3d8;
+    border-left: 6px solid #159957;
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(21, 87, 153, 0.08);
+  }
+
+  .efti-onboarding-card .efti-onboarding-cta {
+    display: inline-block;
+    margin-top: 0.75rem;
+    padding: 0.6rem 1.25rem;
+    background: linear-gradient(120deg, #155799, #159957);
+    color: #fff;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+  }
+
+  .efti-onboarding-card .efti-onboarding-cta:hover {
+    opacity: 0.9;
+    color: #fff;
+    text-decoration: none;
+  }
 </style>
 
 <div class="efti-onboarding-banner">
@@ -72,9 +100,12 @@ The **eu-ee32** public IP: 77.42.44.136
 The **eu-ee31** public IP: 46.62.227.86
 
 ## Onboarding
-If you want to integrate with the eFTI TestBed, please fill out this form: [eFTI TestBed Access Request Information Form](https://forms.office.com/r/sGm0CrgHtT).
 
-After submitting your request, you will receive credentials for a user account with access to the **Admin Panel**. For any additional questions, you can contact [support@dlk.ee](mailto:support@dlk.ee).
+<div class="efti-onboarding-card">
+  <p>If you want to integrate with the eFTI TestBed, please fill out the access request form.</p>
+  <a class="efti-onboarding-cta" href="https://forms.office.com/r/sGm0CrgHtT">eFTI TestBed Access Request Information Form</a>
+  <p style="margin-top: 1rem; margin-bottom: 0;">After submitting your request, you will receive credentials for a user account with access to the <strong>Admin Panel</strong>. For any additional questions, you can contact <a href="mailto:support@dlk.ee">support@dlk.ee</a>.</p>
+</div>
 
 ## Integrations
 - [For Gates](#for-gates)
