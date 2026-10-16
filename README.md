@@ -2,6 +2,49 @@
 
 <img alt="eFTI4LIVE" height="35" src="https://efti4live.eu/wp-content/uploads/2025/11/EFTI4LIVE-logo-color_1@4x.png"> &nbsp;&nbsp; <img alt="Pikker Development" height="30" src="img/pikker_logo_black.png">
 
+<style>
+  .efti-onboarding-banner {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 9999;
+    box-sizing: border-box;
+    padding: 0.85rem 1.25rem;
+    background: linear-gradient(120deg, #155799, #159957);
+    color: #fff;
+    text-align: center;
+    font-size: 0.95rem;
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.25);
+  }
+
+  .efti-onboarding-banner a {
+    display: inline-block;
+    margin-left: 0.75rem;
+    padding: 0.4rem 1rem;
+    background: #fff;
+    color: #155799;
+    border-radius: 4px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .efti-onboarding-banner a:hover {
+    background: #f2f2f2;
+    text-decoration: none;
+  }
+
+  body {
+    padding-bottom: 4.5rem;
+  }
+</style>
+
+<div class="efti-onboarding-banner">
+  Want to integrate with the eFTI TestBed?
+  <a href="https://forms.office.com/r/sGm0CrgHtT">Fill out the access request form</a>
+</div>
+
 ## Introduction
 
 **eFTI TestBed** is a playground for eFTI project member states.
